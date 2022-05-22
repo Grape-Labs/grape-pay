@@ -126,7 +126,7 @@ const App: FC<AppProps> & { getInitialProps(appContext: AppContext): Promise<App
             :*/}
                 <>
                 {selectedToken.length <= 0 ? 
-                    <p><h2 style={{textAlign:"center",marginTop:2}}>SELECT SOL / SPL-TOKEN</h2>
+                    <p><h1 style={{textAlign:"center",marginTop:2}}>SELECT SOL / SPL-TOKEN</h1>
                         <button
                             className={cssButton.token_dark}
                             type="button"
