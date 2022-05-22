@@ -19,6 +19,7 @@ import { SOLIcon } from '../images/SOLIcon';
 import { GrapeIcon } from '../images/GrapeIcon';
 import css from './App.module.css';
 //import Select, { StylesConfig } from 'react-select'
+import cssButton from '../buttons/GenerateButton.module.css';
 
 interface AppProps extends NextAppProps {
     host: string;
@@ -40,6 +41,7 @@ const App: FC<AppProps> & { getInitialProps(appContext: AppContext): Promise<App
     const [selectedMintLabel, setSelectedMintLabel] = React.useState("");
     const [selectedMintPublicKey, setSelectedMintPublicKey] = React.useState("");
     const [shouldDisplaySelect, setShouldDisplaySelect] = React.useState(true);
+    const [selectedToken, setSelectedToken] = React.useState("")    
     const mintOptions = new Array();
 
     // If you're testing without a mobile wallet, set this to true to allow a browser wallet to be used.
@@ -78,120 +80,176 @@ const App: FC<AppProps> & { getInitialProps(appContext: AppContext): Promise<App
         //}
     }
 
+    function fetchAndSetToken(token:string){
+        for (var supported of MAINNET_PAYMENTS){
+            mintOptions.push({
+                value:supported.MINT,
+                label:supported.LABEL
+            })
+            
+            if (supported.LABEL === token){
+                setSelectedMintLabel(supported.LABEL);
+                setSelectedMintPublicKey(supported.MINT);
+                setSelectedToken(token)
+            }
+        }
+    }
+
     return (
         <ThemeProvider>
-            <FullscreenProvider>
-                {recipient && label ? (
-                    <ConnectionProvider endpoint={DEVNET_ENDPOINT}>
-                        <WalletProvider wallets={wallets} autoConnect={connectWallet}>
-                            <WalletModalProvider>
-                            <>
-                            
-                                {/*
-                                {!shouldDisplaySelect ? null : (
-                                    <div
-                                        style={{position:"absolute", top:0,right:0,zIndex:999}}
-                                    >
-                                        <Select 
-                                            //defaultValue={MAINNET_GRAPE_MINT}
-                                            isClearable={true}
-                                            options={mintOptions} 
-                                            
-                                            onChange={(e: any) => {
-                                                handleMintChange(e)
-                                            }} 
-                                            theme={(theme) => ({
-                                                ...theme,
-                                                borderRadius: 0,
-                                                colors: {
-                                                ...theme.colors,
-                                                neutral0: '#222',
-                                                neutral5: 'black',
-                                                neutral10: 'black',
-                                                neutral20: 'black',
-                                                primary25: '#777',
-                                                primary: 'black',
-                                                },
-                                            })}
-                                        />
-                                    </div>
-                                        )}*/}
-                                {selectedMintPublicKey ?
+            
+            {selectedToken.length <= 0 ? 
+                <>SELECT
+                     <button
+                        className={cssButton.root}
+                        type="button"
+                        onClick={e => setSelectedMintLabel("SOL")}
+                        //disabled={!amount || amount.isLessThanOrEqualTo(0)
+                    >SOL</button>
+                    <button
+                        className={cssButton.root}
+                        type="button"
+                        onClick={e => setSelectedMintLabel("USDC")}
+                        //disabled={!amount || amount.isLessThanOrEqualTo(0)
+                    >USDC</button>
+                    <button
+                        className={cssButton.root}
+                        type="button"
+                        onClick={e => setSelectedMintLabel("GRAPE")}
+                        //disabled={!amount || amount.isLessThanOrEqualTo(0)
+                    >GRAPE</button>
+                    <button
+                        className={cssButton.root}
+                        type="button"
+                        onClick={e => setSelectedMintLabel("GRAPE")}
+                        //disabled={!amount || amount.isLessThanOrEqualTo(0)
+                    >GRAPE</button>
+                    <button
+                        className={cssButton.root}
+                        type="button"
+                        onClick={e => setSelectedMintLabel("MANGO")}
+                        //disabled={!amount || amount.isLessThanOrEqualTo(0)
+                    >MANGO</button>
+                    <button
+                        className={cssButton.root}
+                        type="button"
+                        onClick={e => setSelectedMintLabel("UNQ")}
+                        //disabled={!amount || amount.isLessThanOrEqualTo(0)
+                    >UNQ</button>
+                </>
+            :
+                <FullscreenProvider>
+                    {recipient && label ? (
+                        <ConnectionProvider endpoint={DEVNET_ENDPOINT}>
+                            <WalletProvider wallets={wallets} autoConnect={connectWallet}>
+                                <WalletModalProvider>
                                 <>
-                                    {selectedMintPublicKey === 'So11111111111111111111111111111111111111112' ?
-                                        <ConfigProvider
-                                            baseURL={baseURL}
-                                            link={link}
-                                            recipient={recipient}
-                                            label={label}
-                                            message={message}
-                                            symbol="SOL"
-                                            icon={<SOLIcon />}
-                                            decimals={9}
-                                            minDecimals={1}
-                                            connectWallet={connectWallet}
+                                    {/*
+                                    {!shouldDisplaySelect ? null : (
+                                        <div
+                                            style={{position:"absolute", top:0,right:0,zIndex:999}}
                                         >
-                                            <TransactionsProvider>
-                                                <PaymentProvider>
-                                                    <Component {...pageProps} />
-                                                </PaymentProvider>
-                                            </TransactionsProvider>
-                                        </ConfigProvider>
-                                    :
+                                            <Select 
+                                                //defaultValue={MAINNET_GRAPE_MINT}
+                                                isClearable={true}
+                                                options={mintOptions} 
+                                                
+                                                onChange={(e: any) => {
+                                                    handleMintChange(e)
+                                                }} 
+                                                theme={(theme) => ({
+                                                    ...theme,
+                                                    borderRadius: 0,
+                                                    colors: {
+                                                    ...theme.colors,
+                                                    neutral0: '#222',
+                                                    neutral5: 'black',
+                                                    neutral10: 'black',
+                                                    neutral20: 'black',
+                                                    primary25: '#777',
+                                                    primary: 'black',
+                                                    },
+                                                })}
+                                            />
+                                        </div>
+                                            )}*/}
+                                    {selectedMintPublicKey ?
+                                    <>
+                                        {selectedMintPublicKey === 'So11111111111111111111111111111111111111112' ?
+                                            <ConfigProvider
+                                                baseURL={baseURL}
+                                                link={link}
+                                                recipient={recipient}
+                                                label={label}
+                                                message={message}
+                                                symbol="SOL"
+                                                icon={<SOLIcon />}
+                                                decimals={9}
+                                                minDecimals={1}
+                                                connectWallet={connectWallet}
+                                            >
+                                                <TransactionsProvider>
+                                                    <PaymentProvider>
+                                                        <Component {...pageProps} />
+                                                    </PaymentProvider>
+                                                </TransactionsProvider>
+                                            </ConfigProvider>
+                                        :
+                                            <ConfigProvider
+                                                baseURL={baseURL}
+                                                link={link}
+                                                recipient={recipient}
+                                                label={label}
+                                                message={message}
+                                                splToken={new PublicKey(selectedMintPublicKey)}
+                                                symbol={selectedMintLabel}
+                                                icon={<GrapeIcon />}
+                                                decimals={6}
+                                                minDecimals={2}
+                                                connectWallet={connectWallet}
+                                            >
+                                                <TransactionsProvider>
+                                                    <PaymentProvider>
+                                                        <Component {...pageProps} />
+                                                    </PaymentProvider>
+                                                </TransactionsProvider>
+                                            </ConfigProvider>
+                                        }
+                                    </>
+                                        :
+                                    <>
                                         <ConfigProvider
                                             baseURL={baseURL}
                                             link={link}
                                             recipient={recipient}
                                             label={label}
-                                            message={message}
-                                            splToken={new PublicKey(selectedMintPublicKey)}
-                                            symbol={selectedMintLabel}
+                                            message="{message}"
+                                            splToken={MAINNET_GRAPE_MINT}
+                                            symbol="GRAPE"
                                             icon={<GrapeIcon />}
                                             decimals={6}
                                             minDecimals={2}
                                             connectWallet={connectWallet}
                                         >
-                                            <TransactionsProvider>
+                                                <TransactionsProvider>
                                                 <PaymentProvider>
                                                     <Component {...pageProps} />
                                                 </PaymentProvider>
                                             </TransactionsProvider>
                                         </ConfigProvider>
+                                    </>
                                     }
                                 </>
-                                    :
-                                <>
-                                    <ConfigProvider
-                                        baseURL={baseURL}
-                                        link={link}
-                                        recipient={recipient}
-                                        label={label}
-                                        message="{message}"
-                                        splToken={MAINNET_GRAPE_MINT}
-                                        symbol="GRAPE"
-                                        icon={<GrapeIcon />}
-                                        decimals={6}
-                                        minDecimals={2}
-                                        connectWallet={connectWallet}
-                                    >
-                                            <TransactionsProvider>
-                                            <PaymentProvider>
-                                                <Component {...pageProps} />
-                                            </PaymentProvider>
-                                        </TransactionsProvider>
-                                    </ConfigProvider>
-                                </>
-                                }
-                            </>
-                            </WalletModalProvider>
-                        </WalletProvider>
-                    </ConnectionProvider>
-                ) : (
-                    <div className={css.logo}>
-                        <SolanaPayLogo width={240} height={88} />
-                    </div>
-                )}
-            </FullscreenProvider>
+                                </WalletModalProvider>
+                            </WalletProvider>
+                        </ConnectionProvider>
+                    ) : (
+                        <div className={css.logo}>
+                            <SolanaPayLogo width={240} height={88} />
+                        </div>
+                    )}
+                </FullscreenProvider>
+            }
         </ThemeProvider>
     );
 };

@@ -5,7 +5,7 @@ import css from './PoweredBy.module.css';
 export const PoweredBy: FC = () => {
     return (
         <div className={css.root}>
-            Powered by <SolanaPayLogo />
+            Powered by <SolanaPayLogo /> @ Athens DAO / Hacker House X
         </div>
     );
 };
