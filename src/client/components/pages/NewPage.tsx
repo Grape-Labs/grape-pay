@@ -1,6 +1,7 @@
 import { NextPage } from 'next';
 import React from 'react';
 import { useMediaQuery } from 'react-responsive';
+import { RefreshButton } from '../buttons/RefreshButton';
 import { FullscreenButton } from '../buttons/FullscreenButton';
 import { GenerateButton } from '../buttons/GenerateButton';
 import { TransactionsLink } from '../buttons/TransactionsLink';
@@ -12,10 +13,15 @@ import css from './NewPage.module.css';
 const NewPage: NextPage = () => {
     const phone = useMediaQuery({ query: '(max-width: 767px)' });
 
+    function refreshPage() {
+        window.location.reload();
+    }
+
     return phone ? (
         <div className={css.root}>
             <div className={css.top}>
                 <FullscreenButton />
+                <RefreshButton onClick={refreshPage}>Change Payment Type</RefreshButton>
                 <TransactionsLink />
             </div>
             <div className={css.body}>
@@ -29,6 +35,7 @@ const NewPage: NextPage = () => {
             <div className={css.main}>
                 <div className={css.top}>
                     <FullscreenButton />
+                    <RefreshButton onClick={refreshPage}>Change Payment Type</RefreshButton>
                 </div>
                 <div className={css.body}>
                     <NumPad />

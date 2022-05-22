@@ -1,3 +1,15 @@
+.token_dark {
+    border:2px solid #0063cc;
+    margin: 32px auto;
+    padding: 12px 24px;
+    border-radius: 8px;
+    display: block;
+    font-size: 16;
+    line-height: 2;
+    font-weight: 500;
+    cursor: pointer;
+}
+
 .root {
     margin: 32px auto;
     padding: 12px 24px;
