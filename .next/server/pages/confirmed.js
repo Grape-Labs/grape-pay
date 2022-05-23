@@ -4,7 +4,7 @@ exports.id = 377;
 exports.ids = [377];
 exports.modules = {
 
-/***/ 6711:
+/***/ 5769:
 /***/ ((module) => {
 
 // Exports
@@ -18,7 +18,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 3169:
+/***/ 5779:
 /***/ ((module) => {
 
 // Exports
@@ -30,7 +30,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 1293:
+/***/ 4338:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -47,20 +47,20 @@ var jsx_runtime_ = __webpack_require__(997);
 // EXTERNAL MODULE: external "react"
 var external_react_ = __webpack_require__(6689);
 // EXTERNAL MODULE: ./src/client/hooks/usePayment.ts
-var usePayment = __webpack_require__(5607);
+var usePayment = __webpack_require__(2347);
 // EXTERNAL MODULE: ./src/client/components/buttons/BackButton.tsx + 1 modules
-var BackButton = __webpack_require__(5966);
+var BackButton = __webpack_require__(5007);
 // EXTERNAL MODULE: ./src/client/components/buttons/TransactionsLink.tsx + 2 modules
-var TransactionsLink = __webpack_require__(1810);
+var TransactionsLink = __webpack_require__(3380);
 // EXTERNAL MODULE: ./src/client/components/sections/PoweredBy.tsx
-var PoweredBy = __webpack_require__(6957);
+var PoweredBy = __webpack_require__(4432);
 ;// CONCATENATED MODULE: external "color-interpolate"
 const external_color_interpolate_namespaceObject = require("color-interpolate");
 var external_color_interpolate_default = /*#__PURE__*/__webpack_require__.n(external_color_interpolate_namespaceObject);
 ;// CONCATENATED MODULE: external "react-circular-progressbar"
 const external_react_circular_progressbar_namespaceObject = require("react-circular-progressbar");
 // EXTERNAL MODULE: ./src/client/components/sections/Progress.module.css
-var Progress_module = __webpack_require__(3169);
+var Progress_module = __webpack_require__(5779);
 var Progress_module_default = /*#__PURE__*/__webpack_require__.n(Progress_module);
 ;// CONCATENATED MODULE: ./src/client/components/sections/Progress.tsx
 
@@ -77,16 +77,16 @@ const Progress = ()=>{
             case usePayment/* PaymentStatus.Finalized */.bG.Finalized:
                 return [
                     1,
-                    'Complete'
+                    "Complete"
                 ];
             case usePayment/* PaymentStatus.Confirmed */.bG.Confirmed:
             case usePayment/* PaymentStatus.Valid */.bG.Valid:
                 return progress >= 1 ? [
                     1,
-                    'Complete'
+                    "Complete"
                 ] : [
                     progress,
-                    Math.floor(progress * 100) + '%'
+                    Math.floor(progress * 100) + "%"
                 ];
             default:
                 return [
@@ -99,23 +99,23 @@ const Progress = ()=>{
         progress
     ]);
     const interpolated = (0,external_react_.useMemo)(()=>external_color_interpolate_default()([
-            '#8752f3',
-            '#5497d5',
-            '#43b4ca',
-            '#28e0b9',
-            '#19fb9b'
+            "#8752f3",
+            "#5497d5",
+            "#43b4ca",
+            "#28e0b9",
+            "#19fb9b"
         ])
     , []);
     const styles = (0,external_react_.useMemo)(()=>(0,external_react_circular_progressbar_namespaceObject.buildStyles)({
             pathTransitionDuration: 0.5,
             pathColor: interpolated(value),
-            trailColor: 'rgba(0,0,0,.1)'
+            trailColor: "rgba(0,0,0,.1)"
         })
     , [
         interpolated,
         value
     ]);
-    return(/*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
         className: (Progress_module_default()).root,
         children: [
             /*#__PURE__*/ jsx_runtime_.jsx(external_react_circular_progressbar_namespaceObject.CircularProgressbar, {
@@ -128,11 +128,11 @@ const Progress = ()=>{
                 children: text
             })
         ]
-    }));
+    });
 };
 
 // EXTERNAL MODULE: ./src/client/components/pages/ConfirmedPage.module.css
-var ConfirmedPage_module = __webpack_require__(6711);
+var ConfirmedPage_module = __webpack_require__(5769);
 var ConfirmedPage_module_default = /*#__PURE__*/__webpack_require__.n(ConfirmedPage_module);
 ;// CONCATENATED MODULE: ./src/client/components/pages/ConfirmedPage.tsx
 
@@ -145,7 +145,7 @@ var ConfirmedPage_module_default = /*#__PURE__*/__webpack_require__.n(ConfirmedP
 
 const ConfirmedPage = ()=>{
     const { reset  } = (0,usePayment/* usePayment */.V7)();
-    return(/*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
         className: (ConfirmedPage_module_default()).root,
         children: [
             /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
@@ -167,7 +167,7 @@ const ConfirmedPage = ()=>{
                 children: /*#__PURE__*/ jsx_runtime_.jsx(PoweredBy/* PoweredBy */.C, {})
             })
         ]
-    }));
+    });
 };
 /* harmony default export */ const pages_ConfirmedPage = (ConfirmedPage);
 
@@ -177,11 +177,11 @@ const ConfirmedPage = ()=>{
 
 /***/ }),
 
-/***/ 562:
+/***/ 2796:
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("next/dist/server/denormalize-page-path.js");
+module.exports = require("next/dist/shared/lib/head-manager-context.js");
 
 /***/ }),
 
@@ -209,11 +209,27 @@ module.exports = require("next/dist/shared/lib/mitt.js");
 
 /***/ }),
 
+/***/ 4406:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/page-path/denormalize-page-path.js");
+
+/***/ }),
+
 /***/ 4964:
 /***/ ((module) => {
 
 "use strict";
 module.exports = require("next/dist/shared/lib/router-context.js");
+
+/***/ }),
+
+/***/ 3938:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/format-url.js");
 
 /***/ }),
 
@@ -328,7 +344,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [730,664,286,966,231,810], () => (__webpack_exec__(1293)));
+var __webpack_exports__ = __webpack_require__.X(0, [505,664,231,7,434,380], () => (__webpack_exec__(4338)));
 module.exports = __webpack_exports__;
 
 })();

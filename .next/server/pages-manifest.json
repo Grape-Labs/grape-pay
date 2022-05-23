@@ -1,10 +1,10 @@
 {
   "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/api": "pages/api.js",
   "/confirmed": "pages/confirmed.js",
   "/new": "pages/new.js",
   "/pending": "pages/pending.js",
-  "/transactions": "pages/transactions.js",
-  "/_error": "pages/_error.js"
+  "/transactions": "pages/transactions.js"
 }

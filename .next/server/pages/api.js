@@ -5,7 +5,7 @@ exports.id = 237;
 exports.ids = [237];
 exports.modules = {
 
-/***/ 8543:
+/***/ 7274:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
@@ -13,7 +13,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* reexport safe */ _server_api_index__WEBPACK_IMPORTED_MODULE_0__.Z)
 /* harmony export */ });
-/* harmony import */ var _server_api_index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7601);
+/* harmony import */ var _server_api_index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8769);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_server_api_index__WEBPACK_IMPORTED_MODULE_0__]);
 _server_api_index__WEBPACK_IMPORTED_MODULE_0__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
 
@@ -23,7 +23,7 @@ __webpack_async_result__();
 
 /***/ }),
 
-/***/ 7601:
+/***/ 8769:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
@@ -35,8 +35,8 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var _solana_web3_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_solana_web3_js__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var bignumber_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4215);
 /* harmony import */ var bignumber_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(bignumber_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(9606);
-/* harmony import */ var _middleware__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(9874);
+/* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7716);
+/* harmony import */ var _middleware__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5561);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_solana_pay__WEBPACK_IMPORTED_MODULE_0__]);
 _solana_pay__WEBPACK_IMPORTED_MODULE_0__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
 
@@ -46,8 +46,8 @@ _solana_pay__WEBPACK_IMPORTED_MODULE_0__ = (__webpack_async_dependencies__.then 
 
 const get = async (request, response)=>{
     const label = request.query.label;
-    if (!label) throw new Error('missing label');
-    if (typeof label !== 'string') throw new Error('invalid label');
+    if (!label) throw new Error("missing label");
+    if (typeof label !== "string") throw new Error("invalid label");
     const icon = `https://${request.headers.host}/solana-pay-logo.svg`;
     response.status(200).send({
         label,
@@ -55,36 +55,35 @@ const get = async (request, response)=>{
     });
 };
 const post = async (request, response)=>{
-    var ref;
     /*
     Transfer request params provided in the URL by the app client. In practice, these should be generated on the server,
     persisted along with an unpredictable opaque ID representing the payment, and the ID be passed to the app client,
     which will include the ID in the transaction request URL. This prevents tampering with the transaction request.
     */ const recipientField = request.query.recipient;
-    if (!recipientField) throw new Error('missing recipient');
-    if (typeof recipientField !== 'string') throw new Error('invalid recipient');
+    if (!recipientField) throw new Error("missing recipient");
+    if (typeof recipientField !== "string") throw new Error("invalid recipient");
     const recipient = new _solana_web3_js__WEBPACK_IMPORTED_MODULE_1__.PublicKey(recipientField);
     const amountField = request.query.amount;
-    if (!amountField) throw new Error('missing amount');
-    if (typeof amountField !== 'string') throw new Error('invalid amount');
+    if (!amountField) throw new Error("missing amount");
+    if (typeof amountField !== "string") throw new Error("invalid amount");
     const amount = new (bignumber_js__WEBPACK_IMPORTED_MODULE_2___default())(amountField);
-    const splTokenField = request.query['spl-token'];
-    if (splTokenField && typeof splTokenField !== 'string') throw new Error('invalid spl-token');
+    const splTokenField = request.query["spl-token"];
+    if (splTokenField && typeof splTokenField !== "string") throw new Error("invalid spl-token");
     const splToken = splTokenField ? new _solana_web3_js__WEBPACK_IMPORTED_MODULE_1__.PublicKey(splTokenField) : undefined;
     const referenceField = request.query.reference;
-    if (!referenceField) throw new Error('missing reference');
-    if (typeof referenceField !== 'string') throw new Error('invalid reference');
+    if (!referenceField) throw new Error("missing reference");
+    if (typeof referenceField !== "string") throw new Error("invalid reference");
     const reference = new _solana_web3_js__WEBPACK_IMPORTED_MODULE_1__.PublicKey(referenceField);
     const memoParam = request.query.memo;
-    if (memoParam && typeof memoParam !== 'string') throw new Error('invalid memo');
+    if (memoParam && typeof memoParam !== "string") throw new Error("invalid memo");
     const memo = memoParam || undefined;
     const messageParam = request.query.message;
-    if (messageParam && typeof messageParam !== 'string') throw new Error('invalid message');
+    if (messageParam && typeof messageParam !== "string") throw new Error("invalid message");
     const message = messageParam || undefined;
     // Account provided in the transaction request body by the wallet.
-    const accountField = (ref = request.body) === null || ref === void 0 ? void 0 : ref.account;
-    if (!accountField) throw new Error('missing account');
-    if (typeof accountField !== 'string') throw new Error('invalid account');
+    const accountField = request.body?.account;
+    if (!accountField) throw new Error("missing account");
+    if (typeof accountField !== "string") throw new Error("invalid account");
     const account = new _solana_web3_js__WEBPACK_IMPORTED_MODULE_1__.PublicKey(accountField);
     // Compose a simple transfer transaction to return. In practice, this can be any transaction, and may be signed.
     let transaction = await (0,_solana_pay__WEBPACK_IMPORTED_MODULE_0__.createTransfer)(_core__WEBPACK_IMPORTED_MODULE_3__/* .connection */ .ZI, account, {
@@ -104,7 +103,7 @@ const post = async (request, response)=>{
         verifySignatures: false,
         requireAllSignatures: false
     });
-    const base64 = serialized.toString('base64');
+    const base64 = serialized.toString("base64");
     response.status(200).send({
         transaction: base64,
         message
@@ -113,8 +112,8 @@ const post = async (request, response)=>{
 const index = async (request, response)=>{
     await (0,_middleware__WEBPACK_IMPORTED_MODULE_4__/* .cors */ .D)(request, response);
     await (0,_middleware__WEBPACK_IMPORTED_MODULE_4__/* .rateLimit */ .h)(request, response);
-    if (request.method === 'GET') return get(request, response);
-    if (request.method === 'POST') return post(request, response);
+    if (request.method === "GET") return get(request, response);
+    if (request.method === "POST") return post(request, response);
     throw new Error(`Unexpected method ${request.method}`);
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (index);
@@ -124,7 +123,7 @@ __webpack_async_result__();
 
 /***/ }),
 
-/***/ 9606:
+/***/ 7716:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 
@@ -156,14 +155,14 @@ const cache = external_cache_manager_default().caching({
 // EXTERNAL MODULE: external "@solana/web3.js"
 var web3_js_ = __webpack_require__(7831);
 ;// CONCATENATED MODULE: ./src/server/core/env.ts
-const CLUSTER_ENDPOINT = process.env.CLUSTER_ENDPOINT || 'https://api.devnet.solana.com';
+const CLUSTER_ENDPOINT = process.env.CLUSTER_ENDPOINT || "https://api.devnet.solana.com";
 const RATE_LIMIT = Number(process.env.RATE_LIMIT) || undefined;
 const RATE_LIMIT_INTERVAL = Number(process.env.RATE_LIMIT_INTERVAL) || undefined;
 
 ;// CONCATENATED MODULE: ./src/server/core/connection.ts
 
 
-const connection = new web3_js_.Connection(CLUSTER_ENDPOINT || 'https://api.devnet.solana.com', 'confirmed');
+const connection = new web3_js_.Connection(CLUSTER_ENDPOINT || "https://api.devnet.solana.com", "confirmed");
 
 ;// CONCATENATED MODULE: ./src/server/core/index.ts
 
@@ -173,7 +172,7 @@ const connection = new web3_js_.Connection(CLUSTER_ENDPOINT || 'https://api.devn
 
 /***/ }),
 
-/***/ 9874:
+/***/ 5561:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 
@@ -208,7 +207,7 @@ const wrapExpressHandler = function(handler) {
 const cors = wrapExpressHandler(external_cors_default()({
     origin: true,
     methods: [
-        'POST'
+        "POST"
     ]
 }));
 
@@ -216,18 +215,17 @@ const cors = wrapExpressHandler(external_cors_default()({
 const external_express_rate_limit_namespaceObject = require("express-rate-limit");
 var external_express_rate_limit_default = /*#__PURE__*/__webpack_require__.n(external_express_rate_limit_namespaceObject);
 // EXTERNAL MODULE: ./src/server/core/index.ts + 5 modules
-var core = __webpack_require__(9606);
+var core = __webpack_require__(7716);
 ;// CONCATENATED MODULE: ./src/server/middleware/rateLimit.ts
 
 
 
-var ref, ref1;
 // Just basic IP rate-limiting for now
 const rateLimit = wrapExpressHandler(external_express_rate_limit_default()({
-    keyGenerator: (req)=>(ref1 = (ref = req.headers['x-real-ip']) !== null && ref !== void 0 ? ref : req.socket.remoteAddress) !== null && ref1 !== void 0 ? ref1 : 'UNKNOWN'
+    keyGenerator: (req)=>(req.headers["x-real-ip"] ?? req.socket.remoteAddress) ?? "UNKNOWN"
     ,
-    max: core/* RATE_LIMIT */.k7 !== null && core/* RATE_LIMIT */.k7 !== void 0 ? core/* RATE_LIMIT */.k7 : 10,
-    windowMs: core/* RATE_LIMIT_INTERVAL */.ft !== null && core/* RATE_LIMIT_INTERVAL */.ft !== void 0 ? core/* RATE_LIMIT_INTERVAL */.ft : 60
+    max: core/* RATE_LIMIT */.k7 ?? 10,
+    windowMs: core/* RATE_LIMIT_INTERVAL */.ft ?? 60
 }));
 
 ;// CONCATENATED MODULE: ./src/server/middleware/index.ts
@@ -265,7 +263,7 @@ module.exports = import("@solana/pay");;
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__(8543));
+var __webpack_exports__ = (__webpack_exec__(7274));
 module.exports = __webpack_exports__;
 
 })();

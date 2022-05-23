@@ -4,7 +4,7 @@ exports.id = 673;
 exports.ids = [673];
 exports.modules = {
 
-/***/ 6310:
+/***/ 5965:
 /***/ ((module) => {
 
 // Exports
@@ -17,7 +17,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 8499:
+/***/ 9874:
 /***/ ((module) => {
 
 // Exports
@@ -38,7 +38,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 1710:
+/***/ 5658:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -49,8 +49,8 @@ module.exports = {
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6689);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _hooks_useConfig__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1283);
-/* harmony import */ var _utils_constants__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(8337);
+/* harmony import */ var _hooks_useConfig__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4022);
+/* harmony import */ var _utils_constants__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(2472);
 
 
 
@@ -62,22 +62,22 @@ const Amount = ({ amount , showZero  })=>{
         if (amount.isGreaterThan(0)) {
             return amount.toFormat(amount.decimalPlaces() < minDecimals ? minDecimals : amount.decimalPlaces());
         } else {
-            return showZero ? '0' : _utils_constants__WEBPACK_IMPORTED_MODULE_3__/* .NON_BREAKING_SPACE */ .qD;
+            return showZero ? "0" : _utils_constants__WEBPACK_IMPORTED_MODULE_3__/* .NON_BREAKING_SPACE */ .qD;
         }
     }, [
         amount,
         minDecimals,
         showZero
     ]);
-    return(/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
+    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
         children: value
-    }));
+    });
 };
 
 
 /***/ }),
 
-/***/ 8528:
+/***/ 620:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -96,7 +96,7 @@ function useTransactions() {
 
 /***/ }),
 
-/***/ 8869:
+/***/ 5449:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -115,9 +115,9 @@ var router_ = __webpack_require__(1853);
 // EXTERNAL MODULE: external "react"
 var external_react_ = __webpack_require__(6689);
 // EXTERNAL MODULE: ./src/client/components/buttons/BackButton.tsx + 1 modules
-var BackButton = __webpack_require__(5966);
+var BackButton = __webpack_require__(5007);
 // EXTERNAL MODULE: ./src/client/components/sections/PoweredBy.tsx
-var PoweredBy = __webpack_require__(6957);
+var PoweredBy = __webpack_require__(4432);
 // EXTERNAL MODULE: external "bignumber.js"
 var external_bignumber_js_ = __webpack_require__(4215);
 var external_bignumber_js_default = /*#__PURE__*/__webpack_require__.n(external_bignumber_js_);
@@ -127,15 +127,15 @@ var external_clsx_default = /*#__PURE__*/__webpack_require__.n(external_clsx_nam
 ;// CONCATENATED MODULE: external "date-fns"
 const external_date_fns_namespaceObject = require("date-fns");
 // EXTERNAL MODULE: ./src/client/hooks/useConfig.ts
-var useConfig = __webpack_require__(1283);
+var useConfig = __webpack_require__(4022);
 // EXTERNAL MODULE: ./src/client/hooks/useTransactions.ts
-var useTransactions = __webpack_require__(8528);
+var useTransactions = __webpack_require__(620);
 // EXTERNAL MODULE: ./src/client/utils/constants.ts
-var constants = __webpack_require__(8337);
+var constants = __webpack_require__(2472);
 // EXTERNAL MODULE: ./src/client/components/sections/Amount.tsx
-var Amount = __webpack_require__(1710);
+var Amount = __webpack_require__(5658);
 // EXTERNAL MODULE: ./src/client/components/sections/Transactions.module.css
-var Transactions_module = __webpack_require__(8499);
+var Transactions_module = __webpack_require__(9874);
 var Transactions_module_default = /*#__PURE__*/__webpack_require__.n(Transactions_module);
 ;// CONCATENATED MODULE: ./src/client/components/sections/Transactions.tsx
 
@@ -150,7 +150,7 @@ var Transactions_module_default = /*#__PURE__*/__webpack_require__.n(Transaction
 
 const Transactions = ()=>{
     const { transactions  } = (0,useTransactions/* useTransactions */.n)();
-    return(/*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
         className: (Transactions_module_default()).root,
         children: [
             /*#__PURE__*/ jsx_runtime_.jsx("div", {
@@ -162,7 +162,7 @@ const Transactions = ()=>{
                 }, transaction.signature)
             )
         ]
-    }));
+    });
 };
 const Transaction = ({ transaction  })=>{
     const { icon , symbol  } = (0,useConfig/* useConfig */.Z)();
@@ -170,11 +170,11 @@ const Transaction = ({ transaction  })=>{
     , [
         transaction.amount
     ]);
-    const signature = (0,external_react_.useMemo)(()=>transaction.signature.slice(0, 8) + '....' + transaction.signature.slice(-8)
+    const signature = (0,external_react_.useMemo)(()=>transaction.signature.slice(0, 8) + "...." + transaction.signature.slice(-8)
     , [
         transaction.signature
     ]);
-    const getTime = (0,external_react_.useCallback)(()=>(0,external_date_fns_namespaceObject.formatDistance)(new Date(), new Date(transaction.timestamp * 1000)) + ' ago'
+    const getTime = (0,external_react_.useCallback)(()=>(0,external_date_fns_namespaceObject.formatDistance)(new Date(), new Date(transaction.timestamp * 1000)) + " ago"
     , [
         transaction.timestamp
     ]);
@@ -187,7 +187,7 @@ const Transaction = ({ transaction  })=>{
     }, [
         getTime
     ]);
-    return(/*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
         className: (Transactions_module_default()).transaction,
         children: [
             /*#__PURE__*/ jsx_runtime_.jsx("div", {
@@ -227,11 +227,11 @@ const Transaction = ({ transaction  })=>{
                 ]
             })
         ]
-    }));
+    });
 };
 
 // EXTERNAL MODULE: ./src/client/components/pages/TransactionsPage.module.css
-var TransactionsPage_module = __webpack_require__(6310);
+var TransactionsPage_module = __webpack_require__(5965);
 var TransactionsPage_module_default = /*#__PURE__*/__webpack_require__.n(TransactionsPage_module);
 ;// CONCATENATED MODULE: ./src/client/components/pages/TransactionsPage.tsx
 
@@ -243,7 +243,7 @@ var TransactionsPage_module_default = /*#__PURE__*/__webpack_require__.n(Transac
 
 const TransactionsPage = ()=>{
     const router = (0,router_.useRouter)();
-    return(/*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
         className: (TransactionsPage_module_default()).root,
         children: [
             /*#__PURE__*/ jsx_runtime_.jsx("div", {
@@ -259,7 +259,7 @@ const TransactionsPage = ()=>{
             }),
             /*#__PURE__*/ jsx_runtime_.jsx(PoweredBy/* PoweredBy */.C, {})
         ]
-    }));
+    });
 };
 /* harmony default export */ const pages_TransactionsPage = (TransactionsPage);
 
@@ -316,7 +316,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [286,337,966], () => (__webpack_exec__(8869)));
+var __webpack_exports__ = __webpack_require__.X(0, [231,472,7], () => (__webpack_exec__(5449)));
 module.exports = __webpack_exports__;
 
 })();

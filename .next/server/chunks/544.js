@@ -5,12 +5,12 @@ exports.modules = {
 /***/ 7544:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__(6029)
+module.exports = __webpack_require__(4297)
 
 
 /***/ }),
 
-/***/ 6029:
+/***/ 4297:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
@@ -68,6 +68,9 @@ function _interopRequireDefault(obj) {
         default: obj
     };
 }
+function appGetInitialProps(_) {
+    return _appGetInitialProps.apply(this, arguments);
+}
 function _appGetInitialProps() {
     _appGetInitialProps = /**
  * `App` component is used for initialize of pages. It allows for overwriting and full control of the `page` initialization.
@@ -80,18 +83,15 @@ function _appGetInitialProps() {
     });
     return _appGetInitialProps.apply(this, arguments);
 }
-function appGetInitialProps(_) {
-    return _appGetInitialProps.apply(this, arguments);
-}
 class App extends _react.default.Component {
     render() {
         const { Component , pageProps  } = this.props;
-        return(/*#__PURE__*/ _react.default.createElement(Component, Object.assign({}, pageProps)));
+        return /*#__PURE__*/ _react.default.createElement(Component, Object.assign({}, pageProps));
     }
 }
+exports["default"] = App;
 App.origGetInitialProps = appGetInitialProps;
-App.getInitialProps = appGetInitialProps;
-exports["default"] = App; //# sourceMappingURL=_app.js.map
+App.getInitialProps = appGetInitialProps; //# sourceMappingURL=_app.js.map
 
 
 /***/ })

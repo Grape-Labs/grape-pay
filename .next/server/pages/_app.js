@@ -4,7 +4,7 @@ exports.id = 888;
 exports.ids = [888];
 exports.modules = {
 
-/***/ 3804:
+/***/ 5936:
 /***/ ((module) => {
 
 // Exports
@@ -16,7 +16,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 9790:
+/***/ 8715:
 /***/ ((module) => {
 
 // Exports
@@ -27,7 +27,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 9909:
+/***/ 3751:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -38,12 +38,12 @@ module.exports = {
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6689);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _hooks_useConfig__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1283);
+/* harmony import */ var _hooks_useConfig__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4022);
 
 
 
 const ConfigProvider = ({ children , baseURL , link , recipient , label , message , splToken , icon , symbol , decimals , minDecimals =0 , requiredConfirmations =1 , connectWallet =false ,  })=>{
-    return(/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_hooks_useConfig__WEBPACK_IMPORTED_MODULE_2__/* .ConfigContext.Provider */ .E.Provider, {
+    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_hooks_useConfig__WEBPACK_IMPORTED_MODULE_2__/* .ConfigContext.Provider */ .E.Provider, {
         value: {
             baseURL,
             link,
@@ -59,13 +59,13 @@ const ConfigProvider = ({ children , baseURL , link , recipient , label , messag
             connectWallet
         },
         children: children
-    }));
+    });
 };
 
 
 /***/ }),
 
-/***/ 9003:
+/***/ 7674:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -80,10 +80,10 @@ var jsx_runtime_ = __webpack_require__(997);
 // EXTERNAL MODULE: external "react"
 var external_react_ = __webpack_require__(6689);
 // EXTERNAL MODULE: ./src/client/hooks/useFullscreen.ts
-var useFullscreen = __webpack_require__(6185);
+var useFullscreen = __webpack_require__(7570);
 ;// CONCATENATED MODULE: ./src/client/utils/fullscreen.ts
 function isFullscreen() {
-    return typeof document !== 'undefined' && !!(document.fullscreenElement || document.webkitCurrentFullScreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement || document.fullscreen || document.webkitIsFullScreen || document.mozFullScreen);
+    return typeof document !== "undefined" && !!(document.fullscreenElement || document.webkitCurrentFullScreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement || document.fullscreen || document.webkitIsFullScreen || document.mozFullScreen);
 }
 function exitFullscreen() {
     const exitFullscreen1 = document.exitFullscreen || document.webkitExitFullscreen || document.mozCancelFullScreen || document.msExitFullscreen;
@@ -119,35 +119,35 @@ const FullscreenProvider = ({ children  })=>{
     (0,external_react_.useEffect)(()=>{
         const listener = ()=>setFullscreen(isFullscreen())
         ;
-        document.addEventListener('fullscreenchange', listener);
-        document.addEventListener('webkitfullscreenchange', listener);
+        document.addEventListener("fullscreenchange", listener);
+        document.addEventListener("webkitfullscreenchange", listener);
         return ()=>{
-            document.removeEventListener('fullscreenchange', listener);
-            document.removeEventListener('webkitfullscreenchange', listener);
+            document.removeEventListener("fullscreenchange", listener);
+            document.removeEventListener("webkitfullscreenchange", listener);
         };
     }, []);
     (0,external_react_.useEffect)(()=>{
         if (fullscreen) {
-            document.documentElement.classList.add('fullscreen');
-            return ()=>document.documentElement.classList.remove('fullscreen')
+            document.documentElement.classList.add("fullscreen");
+            return ()=>document.documentElement.classList.remove("fullscreen")
             ;
         }
     }, [
         fullscreen
     ]);
-    return(/*#__PURE__*/ jsx_runtime_.jsx(useFullscreen/* FullscreenContext.Provider */.s.Provider, {
+    return /*#__PURE__*/ jsx_runtime_.jsx(useFullscreen/* FullscreenContext.Provider */.s.Provider, {
         value: {
             fullscreen,
             toggleFullscreen: toggleFullscreen
         },
         children: children
-    }));
+    });
 };
 
 
 /***/ }),
 
-/***/ 1450:
+/***/ 3616:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -163,9 +163,9 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var _solana_web3_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_solana_web3_js__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(6689);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _hooks_useConfig__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(1283);
-/* harmony import */ var _hooks_useNavigateWithQuery__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7525);
-/* harmony import */ var _hooks_usePayment__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(5607);
+/* harmony import */ var _hooks_useConfig__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(4022);
+/* harmony import */ var _hooks_useNavigateWithQuery__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(6735);
+/* harmony import */ var _hooks_usePayment__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(2347);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_solana_pay__WEBPACK_IMPORTED_MODULE_1__, _solana_wallet_adapter_react__WEBPACK_IMPORTED_MODULE_2__]);
 ([_solana_pay__WEBPACK_IMPORTED_MODULE_1__, _solana_wallet_adapter_react__WEBPACK_IMPORTED_MODULE_2__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
 
@@ -195,24 +195,24 @@ const PaymentProvider = ({ children  })=>{
     const url1 = (0,react__WEBPACK_IMPORTED_MODULE_4__.useMemo)(()=>{
         if (link1) {
             const url = new URL(String(link1));
-            url.searchParams.append('recipient', recipient1.toBase58());
+            url.searchParams.append("recipient", recipient1.toBase58());
             if (amount1) {
-                url.searchParams.append('amount', amount1.toFixed(amount1.decimalPlaces()));
+                url.searchParams.append("amount", amount1.toFixed(amount1.decimalPlaces()));
             }
             if (splToken1) {
-                url.searchParams.append('spl-token', splToken1.toBase58());
+                url.searchParams.append("spl-token", splToken1.toBase58());
             }
             if (reference1) {
-                url.searchParams.append('reference', reference1.toBase58());
+                url.searchParams.append("reference", reference1.toBase58());
             }
             if (memo1) {
-                url.searchParams.append('memo', memo1);
+                url.searchParams.append("memo", memo1);
             }
             if (label) {
-                url.searchParams.append('label', label);
+                url.searchParams.append("label", label);
             }
             if (message) {
-                url.searchParams.append('message', message);
+                url.searchParams.append("message", message);
             }
             return (0,_solana_pay__WEBPACK_IMPORTED_MODULE_1__.encodeURL)({
                 link: url
@@ -245,7 +245,7 @@ const PaymentProvider = ({ children  })=>{
         setSignature(undefined);
         setStatus(_hooks_usePayment__WEBPACK_IMPORTED_MODULE_7__/* .PaymentStatus.New */ .bG.New);
         setConfirmations(0);
-        navigate('/new', true);
+        navigate("/new", true);
     }, [
         navigate
     ]);
@@ -253,7 +253,7 @@ const PaymentProvider = ({ children  })=>{
         if (status1 === _hooks_usePayment__WEBPACK_IMPORTED_MODULE_7__/* .PaymentStatus.New */ .bG.New && !reference1) {
             setReference(_solana_web3_js__WEBPACK_IMPORTED_MODULE_3__.Keypair.generate().publicKey);
             setStatus(_hooks_usePayment__WEBPACK_IMPORTED_MODULE_7__/* .PaymentStatus.Pending */ .bG.Pending);
-            navigate('/pending');
+            navigate("/pending");
         }
     }, [
         status1,
@@ -268,7 +268,7 @@ const PaymentProvider = ({ children  })=>{
                 try {
                     const request = (0,_solana_pay__WEBPACK_IMPORTED_MODULE_1__.parseURL)(url1);
                     let transaction;
-                    if ('link' in request) {
+                    if ("link" in request) {
                         const { link  } = request;
                         transaction = await (0,_solana_pay__WEBPACK_IMPORTED_MODULE_1__.fetchTransaction)(connection, publicKey, link);
                     } else {
@@ -317,7 +317,7 @@ const PaymentProvider = ({ children  })=>{
                     clearInterval(interval);
                     setSignature(signature.signature);
                     setStatus(_hooks_usePayment__WEBPACK_IMPORTED_MODULE_7__/* .PaymentStatus.Confirmed */ .bG.Confirmed);
-                    navigate('/confirmed', true);
+                    navigate("/confirmed", true);
                 }
             } catch (error) {
                 // If the RPC node doesn't have the transaction signature yet, try again
@@ -354,7 +354,7 @@ const PaymentProvider = ({ children  })=>{
                 }
             } catch (error) {
                 // If the RPC node doesn't have the transaction yet, try again
-                if (error instanceof _solana_pay__WEBPACK_IMPORTED_MODULE_1__.ValidateTransferError && (error.message === 'not found' || error.message === 'missing meta')) {
+                if (error instanceof _solana_pay__WEBPACK_IMPORTED_MODULE_1__.ValidateTransferError && (error.message === "not found" || error.message === "missing meta")) {
                     console.warn(error);
                     timeout = setTimeout(run, 250);
                     return;
@@ -390,7 +390,7 @@ const PaymentProvider = ({ children  })=>{
                 if (!changed) {
                     const confirmations = status.confirmations || 0;
                     setConfirmations(confirmations);
-                    if (confirmations >= requiredConfirmations || status.confirmationStatus === 'finalized') {
+                    if (confirmations >= requiredConfirmations || status.confirmationStatus === "finalized") {
                         clearInterval(interval);
                         setStatus(_hooks_usePayment__WEBPACK_IMPORTED_MODULE_7__/* .PaymentStatus.Finalized */ .bG.Finalized);
                     }
@@ -409,7 +409,7 @@ const PaymentProvider = ({ children  })=>{
         connection,
         requiredConfirmations
     ]);
-    return(/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_hooks_usePayment__WEBPACK_IMPORTED_MODULE_7__/* .PaymentContext.Provider */ .Lq.Provider, {
+    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_hooks_usePayment__WEBPACK_IMPORTED_MODULE_7__/* .PaymentContext.Provider */ .Lq.Provider, {
         value: {
             amount: amount1,
             setAmount,
@@ -425,7 +425,7 @@ const PaymentProvider = ({ children  })=>{
             generate
         },
         children: children
-    }));
+    });
 };
 
 __webpack_async_result__();
@@ -433,7 +433,7 @@ __webpack_async_result__();
 
 /***/ }),
 
-/***/ 7882:
+/***/ 3056:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -459,39 +459,39 @@ function useTheme() {
 
 
 const ThemeProvider = ({ children  })=>{
-    const query = '(prefers-color-scheme: light)';
-    const { 0: theme , 1: setTheme  } = (0,external_react_.useState)(()=> false ? 0 : 'dark'
+    const query = "(prefers-color-scheme: light)";
+    const { 0: theme , 1: setTheme  } = (0,external_react_.useState)(()=> false ? 0 : "dark"
     );
     (0,external_react_.useEffect)(()=>{
         if (window.matchMedia) {
-            const listener = (event)=>setTheme(event.matches ? 'light' : 'dark')
+            const listener = (event)=>setTheme(event.matches ? "light" : "dark")
             ;
-            window.matchMedia(query).addEventListener('change', listener);
-            return ()=>window.matchMedia(query).removeEventListener('change', listener)
+            window.matchMedia(query).addEventListener("change", listener);
+            return ()=>window.matchMedia(query).removeEventListener("change", listener)
             ;
         }
     }, []);
     (0,external_react_.useEffect)(()=>{
         document.documentElement.classList.add(theme);
-        document.documentElement.style.visibility = 'visible';
+        document.documentElement.style.visibility = "visible";
         return ()=>document.documentElement.classList.remove(theme)
         ;
     }, [
         theme
     ]);
-    return(/*#__PURE__*/ jsx_runtime_.jsx(ThemeContext.Provider, {
+    return /*#__PURE__*/ jsx_runtime_.jsx(ThemeContext.Provider, {
         value: {
             theme,
             setTheme
         },
         children: children
-    }));
+    });
 };
 
 
 /***/ }),
 
-/***/ 717:
+/***/ 9859:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -509,10 +509,10 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var bignumber_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(bignumber_js__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6689);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _hooks_useConfig__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(1283);
-/* harmony import */ var _hooks_useTransactions__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(8528);
-/* harmony import */ var _utils_arraysEqual__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(9825);
-/* harmony import */ var _utils_constants__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(8337);
+/* harmony import */ var _hooks_useConfig__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(4022);
+/* harmony import */ var _hooks_useTransactions__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(620);
+/* harmony import */ var _utils_arraysEqual__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(113);
+/* harmony import */ var _utils_constants__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(2472);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_solana_spl_token__WEBPACK_IMPORTED_MODULE_1__, _solana_wallet_adapter_react__WEBPACK_IMPORTED_MODULE_2__]);
 ([_solana_spl_token__WEBPACK_IMPORTED_MODULE_1__, _solana_wallet_adapter_react__WEBPACK_IMPORTED_MODULE_2__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
 
@@ -561,7 +561,7 @@ const TransactionsProvider = ({ children , pollInterval  })=>{
                 setLoading(true);
                 const confirmedSignatureInfos = await connection.getSignaturesForAddress(associatedToken1 || recipient, {
                     limit: 10
-                }, 'confirmed');
+                }, "confirmed");
                 if (changed) return;
                 setSignatures((prevSignatures)=>{
                     const nextSignatures = confirmedSignatureInfos.map(({ signature  })=>signature
@@ -609,26 +609,25 @@ const TransactionsProvider = ({ children , pollInterval  })=>{
             }
             if (changed) return;
             setTransactions(signatures.map((signature, signatureIndex)=>{
-                var ref;
                 const parsedTransaction = parsedTransactions[signatureIndex];
                 const signatureStatus = signatureStatuses.value[signatureIndex];
-                if (!(parsedTransaction === null || parsedTransaction === void 0 ? void 0 : parsedTransaction.meta) || !signatureStatus) return;
+                if (!parsedTransaction?.meta || !signatureStatus) return;
                 const timestamp = parsedTransaction.blockTime;
                 const error = parsedTransaction.meta.err;
                 const status = signatureStatus.confirmationStatus;
                 if (!timestamp || !status) return;
                 if (parsedTransaction.transaction.message.instructions.length !== 1) return;
                 const instruction = parsedTransaction.transaction.message.instructions[0];
-                if (!('program' in instruction)) return;
+                if (!("program" in instruction)) return;
                 const program = instruction.program;
-                const type = (ref = instruction.parsed) === null || ref === void 0 ? void 0 : ref.type;
+                const type = instruction.parsed?.type;
                 const info = instruction.parsed.info;
                 let preAmount, postAmount;
                 if (!associatedToken1) {
                     // Include only SystemProgram.transfer instructions
-                    if (!(program === 'system' && type === 'transfer')) return;
+                    if (!(program === "system" && type === "transfer")) return;
                     // Include only transfers to the recipient
-                    if ((info === null || info === void 0 ? void 0 : info.destination) !== recipient.toBase58()) return;
+                    if (info?.destination !== recipient.toBase58()) return;
                     // Exclude self-transfers
                     if (info.source === recipient.toBase58()) return;
                     const accountIndex = parsedTransaction.transaction.message.accountKeys.findIndex(({ pubkey  })=>pubkey.equals(recipient)
@@ -639,29 +638,28 @@ const TransactionsProvider = ({ children , pollInterval  })=>{
                     preAmount = new (bignumber_js__WEBPACK_IMPORTED_MODULE_4___default())(preBalance).div(_solana_web3_js__WEBPACK_IMPORTED_MODULE_3__.LAMPORTS_PER_SOL);
                     postAmount = new (bignumber_js__WEBPACK_IMPORTED_MODULE_4___default())(postBalance).div(_solana_web3_js__WEBPACK_IMPORTED_MODULE_3__.LAMPORTS_PER_SOL);
                 } else {
-                    var ref1, ref2;
                     // Include only TokenProgram.transfer / TokenProgram.transferChecked instructions
-                    if (!(program === 'spl-token' && (type === 'transfer' || type === 'transferChecked'))) return;
+                    if (!(program === "spl-token" && (type === "transfer" || type === "transferChecked"))) return;
                     // Include only transfers to the recipient ATA
-                    if ((info === null || info === void 0 ? void 0 : info.destination) !== associatedToken1.toBase58()) return;
+                    if (info?.destination !== associatedToken1.toBase58()) return;
                     // Exclude self-transfers
                     if (info.source === associatedToken1.toBase58()) return;
                     const accountIndex = parsedTransaction.transaction.message.accountKeys.findIndex(({ pubkey  })=>pubkey.equals(associatedToken1)
                     );
                     if (accountIndex === -1) return;
-                    const preBalance = (ref1 = parsedTransaction.meta.preTokenBalances) === null || ref1 === void 0 ? void 0 : ref1.find((x)=>x.accountIndex === accountIndex
+                    const preBalance = parsedTransaction.meta.preTokenBalances?.find((x)=>x.accountIndex === accountIndex
                     );
-                    if (!(preBalance === null || preBalance === void 0 ? void 0 : preBalance.uiTokenAmount.uiAmountString)) return;
-                    const postBalance = (ref2 = parsedTransaction.meta.postTokenBalances) === null || ref2 === void 0 ? void 0 : ref2.find((x)=>x.accountIndex === accountIndex
+                    if (!preBalance?.uiTokenAmount.uiAmountString) return;
+                    const postBalance = parsedTransaction.meta.postTokenBalances?.find((x)=>x.accountIndex === accountIndex
                     );
-                    if (!(postBalance === null || postBalance === void 0 ? void 0 : postBalance.uiTokenAmount.uiAmountString)) return;
+                    if (!postBalance?.uiTokenAmount.uiAmountString) return;
                     preAmount = new (bignumber_js__WEBPACK_IMPORTED_MODULE_4___default())(preBalance.uiTokenAmount.uiAmountString);
                     postAmount = new (bignumber_js__WEBPACK_IMPORTED_MODULE_4___default())(postBalance.uiTokenAmount.uiAmountString);
                 }
                 // Exclude negative amounts
                 if (postAmount.lt(preAmount)) return;
                 const amount = postAmount.minus(preAmount).toString();
-                const confirmations = status === 'finalized' ? _utils_constants__WEBPACK_IMPORTED_MODULE_8__/* .MAX_CONFIRMATIONS */ .Xc : signatureStatus.confirmations || 0;
+                const confirmations = status === "finalized" ? _utils_constants__WEBPACK_IMPORTED_MODULE_8__/* .MAX_CONFIRMATIONS */ .Xc : signatureStatus.confirmations || 0;
                 return {
                     signature,
                     amount,
@@ -686,13 +684,13 @@ const TransactionsProvider = ({ children , pollInterval  })=>{
         recipient,
         pollInterval
     ]);
-    return(/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_hooks_useTransactions__WEBPACK_IMPORTED_MODULE_7__/* .TransactionsContext.Provider */ ._.Provider, {
+    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_hooks_useTransactions__WEBPACK_IMPORTED_MODULE_7__/* .TransactionsContext.Provider */ ._.Provider, {
         value: {
             transactions,
             loading
         },
         children: children
-    }));
+    });
 };
 
 __webpack_async_result__();
@@ -700,7 +698,7 @@ __webpack_async_result__();
 
 /***/ }),
 
-/***/ 5772:
+/***/ 7555:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -714,7 +712,7 @@ __webpack_async_result__();
 
 
 const GrapeIcon = ({ width =32 , height =32  })=>{
-    return(/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("svg", {
+    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("svg", {
         width: width,
         height: height,
         fill: "none",
@@ -724,13 +722,13 @@ const GrapeIcon = ({ width =32 , height =32  })=>{
             d: "M9.01656587,22 C7.35962231,22 6.01590977,20.6620342 6.01414706,19.0104197 C6.014381,18.6854574 6.0683383,18.3627546 6.17385019,18.0552822 C4.65355783,17.7078956 3.66088018,16.2486823 3.89967765,14.712301 C3.92491623,14.5431035 3.96663621,14.3767602 4.02424609,14.2156295 C3.4237021,14.0728659 2.88175433,13.7494098 2.47193169,13.2891462 C1.72849601,12.4624125 1.51596312,11.2886187 1.92255293,10.2549928 C0.574618257,9.74031484 -0.212717429,8.33995457 0.0504549418,6.92526737 C0.313627312,5.51058017 1.55231363,4.48469804 2.99575795,4.48596237 C3.70977051,4.48440525 4.40081639,4.73735035 4.94413611,5.19913169 C5.03896245,5.11514097 5.13926233,5.03749899 5.24437799,4.96671491 L5.36894643,4.89985528 L5.42643955,4.86801737 C5.5328774,4.80668234 5.64271625,4.75140804 5.755428,4.7024602 L5.89916081,4.65470333 L5.96304206,4.63560058 C6.07846122,4.5978584 6.19572768,4.56597948 6.31438894,4.54008683 L6.45173363,4.54008683 L6.51242082,4.54008683 C6.63409636,4.52251081 6.75680077,4.51293873 6.87973802,4.51143271 C6.93403708,4.51143271 6.97555989,4.51143271 7.02027677,4.51143271 L7.08096396,4.51143271 C7.2084816,4.51824383 7.33543563,4.53313157 7.4610574,4.55600579 C7.50980885,4.56536124 7.55783865,4.578128 7.60479022,4.59421129 L7.67186553,4.61331404 C7.78701504,4.64184071 7.90012381,4.67800422 8.01043616,4.72156295 C8.08070554,4.75021708 8.14458679,4.78523878 8.2116621,4.82026049 L8.27554336,4.8552822 L8.34900679,4.8934877 C8.40018906,4.9144998 8.44936418,4.94007388 8.49593367,4.9698987 C8.57259117,5.02402315 8.62369617,5.06541245 8.67160711,5.10361795 C8.35220086,3.6040521 7.7517171,1.62054993 6.04928175,1.07930535 C5.69874518,0.95068507 5.33014791,0.877632393 4.95691236,0.862807525 C4.0913214,0.862807525 3.21614826,1.35629522 1.73090917,2.67756874 C1.60080541,2.7887062 1.4167449,2.81179054 1.26307634,2.73624297 C1.10940777,2.66069541 1.01574927,2.501077 1.02502135,2.33053546 C1.0291406,2.21770958 1.08003178,2.11164293 1.1655601,2.03762663 C2.81050232,0.569898698 3.87412515,0 4.95371829,0 C5.42529916,0.0101105104 5.89178986,0.0994489882 6.33355332,0.264254703 C7.32371271,0.601736614 7.97849554,1.12387844 8.65244274,2.34327062 C9.08779739,2.41141279 9.52771094,2.44653527 9.96839651,2.44833575 C13.057055,2.44833575 13.9513925,0.538060781 13.9865272,0.461649783 C14.0566749,0.308273678 14.2102907,0.209927141 14.3793969,0.210130246 C14.439031,0.209865925 14.4979671,0.222920722 14.5518763,0.248335745 C14.6560393,0.293055164 14.7379381,0.377435376 14.7793339,0.48268504 C14.8207296,0.587934704 14.818185,0.705314118 14.7722666,0.808683068 C14.7275497,0.910564399 13.6287922,3.30795948 9.98117276,3.30795948 C9.66619319,3.30562385 9.35160204,3.2854272 9.03892431,3.24746744 C9.21808608,3.74708278 9.36530791,4.25751208 9.47970494,4.77568741 C9.88059439,4.59234413 10.3162601,4.49680589 10.75733,4.49551375 C11.3243112,4.49761987 11.8787106,4.6622996 12.3543612,4.9698987 C12.4592934,5.03719347 12.5586292,5.11278662 12.6514091,5.1959479 C13.7179784,4.28262725 15.2782426,4.23152348 16.4026614,5.0730821 C17.5270802,5.91464071 17.9130852,7.42240785 17.3307107,8.69811867 C17.1172335,9.18183803 16.7775078,9.59963239 16.3469394,9.90795948 C16.6475777,10.4422013 16.7747835,11.0561645 16.7110626,11.6654124 C16.5482745,13.0729395 15.4233048,14.1770605 14.0088856,14.3175109 C14.0783161,14.5238349 14.1233379,14.7375349 14.1430363,14.9542692 C14.1983201,15.7406538 13.9387581,16.5168358 13.4211781,17.1128799 C13.011662,17.5917696 12.4584577,17.9266434 11.8433112,18.0680174 C11.9511271,18.3749955 12.0061994,18.6979085 12.0062084,19.0231548 C11.9957344,20.6641175 10.6628326,21.9913138 9.01656587,22 Z M9.01656587,16.8740955 C8.23171201,16.8438771 7.49314811,17.2440165 7.09170769,17.9169457 C6.69026727,18.589875 6.69026727,19.4277805 7.09170769,20.1007098 C7.49314811,20.7736391 8.23171201,21.1737785 9.01656587,21.1435601 L9.10599962,21.1435601 C10.2609266,21.0820791 11.1585961,20.1182818 11.1344522,18.9656793 C11.1103083,17.8130768 10.1730609,16.8874693 9.01656587,16.8740955 L9.01656587,16.8740955 Z M6.85737958,13.0280753 C6.05016188,13.0307334 5.31291109,13.4852636 4.95002299,14.2039995 C4.58713489,14.9227355 4.66017012,15.7837503 5.13897392,16.4315485 C5.48253616,16.8938982 5.99820802,17.1990938 6.56991395,17.278437 C6.99079272,16.6921752 7.60828846,16.2754353 8.31067804,16.1036179 C8.22868139,15.8733861 8.17609802,15.633778 8.15416898,15.3904486 C8.10820215,14.8342868 8.21881781,14.2763714 8.47357523,13.7794501 C8.07018694,13.3065158 7.48012934,13.032196 6.85737958,13.0280753 Z M9.19543337,16.0303907 C10.0990762,16.0839079 10.9301277,16.5413885 11.4568297,17.2752533 C12.5753211,17.1251594 13.3846319,16.1350614 13.3061432,15.0128326 C13.2276545,13.8906038 12.2883473,13.022019 11.1597818,13.0280438 L10.9936906,13.0280438 C10.2984222,13.0788458 9.67153958,13.4640023 9.31361654,14.0603123 C8.9556935,14.6566223 8.91159606,15.3893377 9.19543337,16.0240232 L9.19543337,16.0303907 Z M13.7405844,13.4547033 C14.8780822,13.4527628 15.8159137,12.565379 15.877036,11.4331754 C15.9381583,10.3009717 15.1012771,9.3183948 13.9705569,9.19479016 C13.8918421,9.19003787 13.812911,9.19003787 13.7341963,9.19479016 C12.9945106,9.1954234 12.3075972,9.57676471 11.9176114,10.2032707 C11.5276256,10.8297767 11.4898678,11.6126082 11.8177587,12.2735166 C12.5405612,12.4358198 13.1776329,12.8587906 13.6064338,13.4610709 L13.7405844,13.4547033 Z M4.72374579,9.17884454 C4.20148452,9.17924802 3.69727793,9.3694154 3.30558201,9.71374819 C2.87716278,10.0884383 2.61611408,10.6177935 2.58015112,11.1847786 C2.54418815,11.7517638 2.73627321,12.309676 3.11393826,12.7351664 C3.43971725,13.1036746 3.88309651,13.3488295 4.36920485,13.429233 L4.4330861,13.429233 C4.60949986,13.1734096 4.82505364,12.9467316 5.07189861,12.757453 C5.37302433,12.5381021 5.7134479,12.3781636 6.07483425,12.2862518 C6.02685202,12.155471 5.988423,12.0214019 5.959848,11.8850941 C5.81421654,11.184587 5.92766234,10.4552146 6.27925426,9.83154848 C5.87169659,9.41171294 5.30983083,9.17595915 4.72374579,9.17884454 L4.72374579,9.17884454 Z M6.95958958,12.1875543 C7.72850039,12.2144165 8.4573458,12.536039 8.99420743,13.0853835 C9.49089257,12.5739091 10.154849,12.2565511 10.8659281,12.1907381 C10.6934499,11.6251251 10.6934499,11.0211846 10.8659281,10.4555716 C10.7054989,10.0520038 10.4230819,9.70818462 10.0578303,9.47178003 C9.06331223,8.83528333 7.73970584,9.11993277 7.09693427,10.1085384 C6.6832694,10.7311114 6.63573858,11.5268185 6.97236583,12.1939219 L6.95958958,12.1875543 Z M8.9111618,8.27785818 C9.47758191,8.27752686 10.0320808,8.4400253 10.5081931,8.74587554 C10.832384,8.95675707 11.1105046,9.23073462 11.3258731,9.55137482 C11.5046094,9.30756863 11.7200929,9.09277807 11.9646856,8.9146165 C11.8986018,8.80055244 11.8419848,8.6812936 11.7954003,8.55803184 C11.4402148,7.65636899 11.5499602,6.63854258 12.0892541,5.83270622 C12.0284575,5.77863236 11.9632907,5.72964822 11.8944162,5.68625181 C11.5499331,5.46119295 11.1468536,5.3416541 10.7349715,5.34237857 C10.0888731,5.3393669 9.47598473,5.62745989 9.0673192,6.12629538 C8.65865367,6.62513086 8.49796299,7.28130319 8.6300843,7.91172214 C8.66091664,8.03795321 8.70480374,8.16065534 8.76104086,8.27785818 L8.9111618,8.27785818 Z M2.99895201,5.33921852 C2.13350184,5.33989161 1.35365398,5.86009369 1.02297389,6.65730629 C0.69229379,7.4545189 0.875886268,8.37178556 1.48816042,8.98147612 C1.72949325,9.21958505 2.02391031,9.39741279 2.34736325,9.50043415 C2.46335995,9.34425557 2.59499407,9.20024368 2.74023294,9.07062229 C3.10844546,8.75890306 3.54675058,8.54045521 4.01785796,8.43386397 C3.9832349,8.33588154 3.95443836,8.2359493 3.93161827,8.13458755 L3.93161827,8.07727931 C3.89459608,7.90128014 3.87427739,7.72219782 3.87093109,7.54240232 C3.86246147,7.16185724 3.92864665,6.78332735 4.0657689,6.42807525 C4.0657689,6.39942113 4.08812734,6.370767 4.10090359,6.34211288 C4.16114472,6.20556893 4.22940295,6.07268078 4.30532359,5.94413893 C4.31851769,5.9156609 4.33345134,5.88801616 4.35004047,5.86136035 L4.35004047,5.8422576 C3.97109966,5.52471787 3.49394423,5.34706272 2.99895201,5.33921852 L2.99895201,5.33921852 Z M13.7405844,8.32879884 C13.8473438,8.3286875 13.9540106,8.33506693 14.0599907,8.34790159 C14.7362371,8.42120368 15.3671869,8.72218725 15.8486657,9.20115774 C16.6445011,8.63099229 16.9509333,7.59535695 16.5928823,6.68596237 C16.2784485,5.87998024 15.5081686,5.34193 14.6408215,5.32242346 C13.7734745,5.30291691 12.979633,5.80579021 12.6290506,6.59681621 C12.3989609,7.11471517 12.3863092,7.70284721 12.5939159,8.2301013 C12.628905,8.32212907 12.6705367,8.41150919 12.7184844,8.4975398 C13.0466542,8.38211147 13.3926035,8.32499787 13.7405844,8.32879884 L13.7405844,8.32879884 Z M4.90900142,8.32879884 C5.60879418,8.37101575 6.2713813,8.6572887 6.78072208,9.13748191 C7.09942652,8.82539619 7.48333645,8.5873112 7.9050321,8.44023155 C7.86365578,8.32221389 7.82847344,8.20212845 7.79962803,8.0804631 C7.63211174,7.30599095 7.7815741,6.49690552 8.21485617,5.83270622 L8.21485617,5.81678726 C7.82963121,5.50130197 7.34636748,5.32910199 6.84779739,5.3296599 C6.29830626,5.32822893 5.76996856,5.54071225 5.37533455,5.92185239 C4.72015515,6.54785756 4.53316477,7.51810213 4.90900142,8.34153401 L4.90900142,8.32879884 Z",
             id: "Shape"
         })
-    }));
+    });
 };
 
 
 /***/ }),
 
-/***/ 5323:
+/***/ 3961:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -744,7 +742,7 @@ const GrapeIcon = ({ width =32 , height =32  })=>{
 
 
 const SOLIcon = ({ width =32 , height =32  })=>{
-    return(/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("svg", {
+    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("svg", {
         width: width,
         height: height,
         fill: "none",
@@ -797,13 +795,13 @@ const SOLIcon = ({ width =32 , height =32  })=>{
                 fill: "url(#a)"
             })
         ]
-    }));
+    });
 };
 
 
 /***/ }),
 
-/***/ 1426:
+/***/ 6322:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -823,20 +821,20 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(7544);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(6689);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _utils_constants__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(8337);
-/* harmony import */ var _contexts_ConfigProvider__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(9909);
-/* harmony import */ var _contexts_FullscreenProvider__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(9003);
-/* harmony import */ var _contexts_PaymentProvider__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(1450);
-/* harmony import */ var _contexts_ThemeProvider__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(7882);
-/* harmony import */ var _contexts_TransactionsProvider__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(717);
-/* harmony import */ var _images_SolanaPayLogo__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(7312);
-/* harmony import */ var _images_SOLIcon__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(5323);
-/* harmony import */ var _images_GrapeIcon__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(5772);
-/* harmony import */ var _App_module_css__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(9790);
+/* harmony import */ var _utils_constants__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(2472);
+/* harmony import */ var _contexts_ConfigProvider__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(3751);
+/* harmony import */ var _contexts_FullscreenProvider__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(7674);
+/* harmony import */ var _contexts_PaymentProvider__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(3616);
+/* harmony import */ var _contexts_ThemeProvider__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(3056);
+/* harmony import */ var _contexts_TransactionsProvider__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(9859);
+/* harmony import */ var _images_SolanaPayLogo__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(5082);
+/* harmony import */ var _images_SOLIcon__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(3961);
+/* harmony import */ var _images_GrapeIcon__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(7555);
+/* harmony import */ var _App_module_css__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(8715);
 /* harmony import */ var _App_module_css__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(_App_module_css__WEBPACK_IMPORTED_MODULE_20__);
-/* harmony import */ var _buttons_GenerateButton_module_css__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(3804);
+/* harmony import */ var _buttons_GenerateButton_module_css__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(5936);
 /* harmony import */ var _buttons_GenerateButton_module_css__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(_buttons_GenerateButton_module_css__WEBPACK_IMPORTED_MODULE_19__);
-/* harmony import */ var _sections_PoweredBy__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(6957);
+/* harmony import */ var _sections_PoweredBy__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(4432);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_solana_wallet_adapter_base__WEBPACK_IMPORTED_MODULE_1__, _solana_wallet_adapter_phantom__WEBPACK_IMPORTED_MODULE_2__, _solana_wallet_adapter_solflare__WEBPACK_IMPORTED_MODULE_3__, _solana_wallet_adapter_react__WEBPACK_IMPORTED_MODULE_4__, _solana_wallet_adapter_react_ui__WEBPACK_IMPORTED_MODULE_5__, _contexts_PaymentProvider__WEBPACK_IMPORTED_MODULE_12__, _contexts_TransactionsProvider__WEBPACK_IMPORTED_MODULE_14__]);
 ([_solana_wallet_adapter_base__WEBPACK_IMPORTED_MODULE_1__, _solana_wallet_adapter_phantom__WEBPACK_IMPORTED_MODULE_2__, _solana_wallet_adapter_solflare__WEBPACK_IMPORTED_MODULE_3__, _solana_wallet_adapter_react__WEBPACK_IMPORTED_MODULE_4__, _solana_wallet_adapter_react_ui__WEBPACK_IMPORTED_MODULE_5__, _contexts_PaymentProvider__WEBPACK_IMPORTED_MODULE_12__, _contexts_TransactionsProvider__WEBPACK_IMPORTED_MODULE_14__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
 
@@ -932,7 +930,7 @@ const App = ({ Component , host , query , pageProps ,  })=>{
             }
         }
     }
-    return(/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_contexts_ThemeProvider__WEBPACK_IMPORTED_MODULE_13__/* .ThemeProvider */ .f, {
+    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_contexts_ThemeProvider__WEBPACK_IMPORTED_MODULE_13__/* .ThemeProvider */ .f, {
         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
             children: selectedToken.length <= 0 ? /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", {
                 children: [
@@ -989,7 +987,7 @@ const App = ({ Component , host , query , pageProps ,  })=>{
                         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_solana_wallet_adapter_react_ui__WEBPACK_IMPORTED_MODULE_5__.WalletModalProvider, {
                             children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
                                 children: selectedMintPublicKey ? /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-                                    children: selectedMintPublicKey === 'So11111111111111111111111111111111111111112' ? /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_contexts_ConfigProvider__WEBPACK_IMPORTED_MODULE_10__/* .ConfigProvider */ .i, {
+                                    children: selectedMintPublicKey === "So11111111111111111111111111111111111111112" ? /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_contexts_ConfigProvider__WEBPACK_IMPORTED_MODULE_10__/* .ConfigProvider */ .i, {
                                         baseURL: baseURL,
                                         link: link,
                                         recipient: recipient,
@@ -1061,7 +1059,7 @@ const App = ({ Component , host , query , pageProps ,  })=>{
                 })
             })
         })
-    }));
+    });
 };
 App.getInitialProps = async (appContext)=>{
     const props = await next_app__WEBPACK_IMPORTED_MODULE_7__["default"].getInitialProps(appContext);
@@ -1069,7 +1067,7 @@ App.getInitialProps = async (appContext)=>{
     const recipient = query.recipient;
     const label = query.label;
     const message = query.message || undefined;
-    const host = (req === null || req === void 0 ? void 0 : req.headers.host) || 'localhost:3001';
+    const host = req?.headers.host || "localhost:3001";
     return {
         ...props,
         query: {
@@ -1087,13 +1085,13 @@ __webpack_async_result__();
 
 /***/ }),
 
-/***/ 6185:
+/***/ 7570:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "s": () => (/* binding */ FullscreenContext),
-/* harmony export */   "O": () => (/* binding */ useFullscreen)
+/* harmony export */   "O": () => (/* binding */ useFullscreen),
+/* harmony export */   "s": () => (/* binding */ FullscreenContext)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6689);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
@@ -1106,7 +1104,7 @@ function useFullscreen() {
 
 /***/ }),
 
-/***/ 7525:
+/***/ 6735:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -1117,8 +1115,8 @@ function useFullscreen() {
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6689);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _utils_createURLWithQuery__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(6134);
-/* harmony import */ var _useConfig__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1283);
+/* harmony import */ var _utils_createURLWithQuery__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7072);
+/* harmony import */ var _useConfig__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4022);
 
 
 
@@ -1144,7 +1142,7 @@ function useNavigateWithQuery() {
 
 /***/ }),
 
-/***/ 8528:
+/***/ 620:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -1163,7 +1161,7 @@ function useTransactions() {
 
 /***/ }),
 
-/***/ 9825:
+/***/ 113:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -1182,7 +1180,7 @@ function arraysEqual(a, b) {
 
 /***/ }),
 
-/***/ 2957:
+/***/ 6505:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -1191,7 +1189,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* reexport safe */ _client_components_pages_App__WEBPACK_IMPORTED_MODULE_0__.Z)
 /* harmony export */ });
-/* harmony import */ var _client_components_pages_App__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1426);
+/* harmony import */ var _client_components_pages_App__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6322);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_client_components_pages_App__WEBPACK_IMPORTED_MODULE_0__]);
 _client_components_pages_App__WEBPACK_IMPORTED_MODULE_0__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
 
@@ -1313,7 +1311,7 @@ module.exports = import("@solana/wallet-adapter-solflare");;
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [544,286,337,231], () => (__webpack_exec__(2957)));
+var __webpack_exports__ = __webpack_require__.X(0, [544,231,472,434], () => (__webpack_exec__(6505)));
 module.exports = __webpack_exports__;
 
 })();

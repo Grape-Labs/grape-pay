@@ -4,7 +4,7 @@ exports.id = 870;
 exports.ids = [870];
 exports.modules = {
 
-/***/ 6510:
+/***/ 2103:
 /***/ ((module) => {
 
 // Exports
@@ -24,7 +24,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 4415:
+/***/ 1374:
 /***/ ((module) => {
 
 // Exports
@@ -35,14 +35,14 @@ module.exports = {
 
 /***/ }),
 
-/***/ 7711:
+/***/ 7223:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__),
-/* harmony export */   "N": () => (/* binding */ getServerSideProps)
+/* harmony export */   "N": () => (/* binding */ getServerSideProps),
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(997);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
@@ -50,13 +50,13 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var _solana_wallet_adapter_react_ui__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(8847);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(6689);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _hooks_useConfig__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(1283);
-/* harmony import */ var _hooks_usePayment__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(5607);
-/* harmony import */ var _buttons_BackButton__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(5966);
-/* harmony import */ var _sections_Amount__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(1710);
-/* harmony import */ var _sections_PoweredBy__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(6957);
-/* harmony import */ var _sections_QRCode__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(7081);
-/* harmony import */ var _PendingPage_module_css__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(6510);
+/* harmony import */ var _hooks_useConfig__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(4022);
+/* harmony import */ var _hooks_usePayment__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(2347);
+/* harmony import */ var _buttons_BackButton__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(5007);
+/* harmony import */ var _sections_Amount__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(5658);
+/* harmony import */ var _sections_PoweredBy__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(4432);
+/* harmony import */ var _sections_QRCode__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(6158);
+/* harmony import */ var _PendingPage_module_css__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(2103);
 /* harmony import */ var _PendingPage_module_css__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_PendingPage_module_css__WEBPACK_IMPORTED_MODULE_10__);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_solana_wallet_adapter_react__WEBPACK_IMPORTED_MODULE_1__, _solana_wallet_adapter_react_ui__WEBPACK_IMPORTED_MODULE_2__, _sections_QRCode__WEBPACK_IMPORTED_MODULE_9__]);
 ([_solana_wallet_adapter_react__WEBPACK_IMPORTED_MODULE_1__, _solana_wallet_adapter_react_ui__WEBPACK_IMPORTED_MODULE_2__, _sections_QRCode__WEBPACK_IMPORTED_MODULE_9__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
@@ -85,7 +85,7 @@ const PendingPage = ()=>{
         publicKey,
         setVisible
     ]);
-    return(/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
         className: (_PendingPage_module_css__WEBPACK_IMPORTED_MODULE_10___default().root),
         children: [
             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
@@ -130,7 +130,7 @@ const PendingPage = ()=>{
                 children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_sections_PoweredBy__WEBPACK_IMPORTED_MODULE_8__/* .PoweredBy */ .C, {})
             })
         ]
-    }));
+    });
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PendingPage);
 function getServerSideProps() {
@@ -147,7 +147,7 @@ __webpack_async_result__();
 
 /***/ }),
 
-/***/ 1710:
+/***/ 5658:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -158,8 +158,8 @@ __webpack_async_result__();
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6689);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _hooks_useConfig__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1283);
-/* harmony import */ var _utils_constants__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(8337);
+/* harmony import */ var _hooks_useConfig__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4022);
+/* harmony import */ var _utils_constants__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(2472);
 
 
 
@@ -171,22 +171,22 @@ const Amount = ({ amount , showZero  })=>{
         if (amount.isGreaterThan(0)) {
             return amount.toFormat(amount.decimalPlaces() < minDecimals ? minDecimals : amount.decimalPlaces());
         } else {
-            return showZero ? '0' : _utils_constants__WEBPACK_IMPORTED_MODULE_3__/* .NON_BREAKING_SPACE */ .qD;
+            return showZero ? "0" : _utils_constants__WEBPACK_IMPORTED_MODULE_3__/* .NON_BREAKING_SPACE */ .qD;
         }
     }, [
         amount,
         minDecimals,
         showZero
     ]);
-    return(/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
+    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
         children: value
-    }));
+    });
 };
 
 
 /***/ }),
 
-/***/ 7081:
+/***/ 6158:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -201,8 +201,8 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var _solana_qr_code_styling__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_solana_qr_code_styling__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(6689);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _hooks_usePayment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5607);
-/* harmony import */ var _QRCode_module_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(4415);
+/* harmony import */ var _hooks_usePayment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(2347);
+/* harmony import */ var _QRCode_module_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(1374);
 /* harmony import */ var _QRCode_module_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_QRCode_module_css__WEBPACK_IMPORTED_MODULE_5__);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_solana_pay__WEBPACK_IMPORTED_MODULE_1__]);
 _solana_pay__WEBPACK_IMPORTED_MODULE_1__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
@@ -218,12 +218,12 @@ const QRCode = ()=>{
     (0,react__WEBPACK_IMPORTED_MODULE_3__.useEffect)(()=>{
         const listener = ()=>setSize(Math.min(window.screen.availWidth - 48, 400))
         ;
-        window.addEventListener('resize', listener);
-        return ()=>window.removeEventListener('resize', listener)
+        window.addEventListener("resize", listener);
+        return ()=>window.removeEventListener("resize", listener)
         ;
     }, []);
     const { url  } = (0,_hooks_usePayment__WEBPACK_IMPORTED_MODULE_4__/* .usePayment */ .V7)();
-    const options = (0,react__WEBPACK_IMPORTED_MODULE_3__.useMemo)(()=>(0,_solana_pay__WEBPACK_IMPORTED_MODULE_1__.createQROptions)(url, size, 'transparent', '#2a2a2a')
+    const options = (0,react__WEBPACK_IMPORTED_MODULE_3__.useMemo)(()=>(0,_solana_pay__WEBPACK_IMPORTED_MODULE_1__.createQROptions)(url, size, "transparent", "#2a2a2a")
     , [
         url,
         size
@@ -244,10 +244,10 @@ const QRCode = ()=>{
         ref,
         qr
     ]);
-    return(/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
         ref: ref,
         className: (_QRCode_module_css__WEBPACK_IMPORTED_MODULE_5___default().root)
-    }));
+    });
 };
 
 __webpack_async_result__();
@@ -255,14 +255,14 @@ __webpack_async_result__();
 
 /***/ }),
 
-/***/ 5607:
+/***/ 2347:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "bG": () => (/* binding */ PaymentStatus),
 /* harmony export */   "Lq": () => (/* binding */ PaymentContext),
-/* harmony export */   "V7": () => (/* binding */ usePayment)
+/* harmony export */   "V7": () => (/* binding */ usePayment),
+/* harmony export */   "bG": () => (/* binding */ PaymentStatus)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6689);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
@@ -284,7 +284,7 @@ function usePayment() {
 
 /***/ }),
 
-/***/ 7433:
+/***/ 7040:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -294,7 +294,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* reexport safe */ _client_components_pages_PendingPage__WEBPACK_IMPORTED_MODULE_0__.Z),
 /* harmony export */   "getServerSideProps": () => (/* reexport safe */ _client_components_pages_PendingPage__WEBPACK_IMPORTED_MODULE_0__.N)
 /* harmony export */ });
-/* harmony import */ var _client_components_pages_PendingPage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7711);
+/* harmony import */ var _client_components_pages_PendingPage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7223);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_client_components_pages_PendingPage__WEBPACK_IMPORTED_MODULE_0__]);
 _client_components_pages_PendingPage__WEBPACK_IMPORTED_MODULE_0__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
 
@@ -367,7 +367,7 @@ module.exports = import("@solana/wallet-adapter-react-ui");;
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [286,337,966], () => (__webpack_exec__(7433)));
+var __webpack_exports__ = __webpack_require__.X(0, [231,472,7], () => (__webpack_exec__(7040)));
 module.exports = __webpack_exports__;
 
 })();
