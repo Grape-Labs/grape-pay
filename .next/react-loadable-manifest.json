@@ -1,0 +1,8 @@
+{
+  "../../node_modules/@solana/wallet-adapter-solflare/lib/esm/adapter.mjs -> @solflare-wallet/sdk": {
+    "id": 4454,
+    "files": [
+      "static/chunks/454.fd39f18ce1fa0251.js"
+    ]
+  }
+}

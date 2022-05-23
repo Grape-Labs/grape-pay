@@ -1,0 +1,58 @@
+{
+  "polyfillFiles": [
+    "static/chunks/polyfills-5cd94c89d3acac5f.js"
+  ],
+  "devFiles": [],
+  "ampDevFiles": [],
+  "lowPriorityFiles": [
+    "static/lQPcvKoK-5C-fOqm3nVQs/_buildManifest.js",
+    "static/lQPcvKoK-5C-fOqm3nVQs/_ssgManifest.js",
+    "static/lQPcvKoK-5C-fOqm3nVQs/_middlewareManifest.js"
+  ],
+  "pages": {
+    "/_app": [
+      "static/chunks/webpack-e44828098689bcba.js",
+      "static/chunks/framework-5f4595e5518b5600.js",
+      "static/chunks/main-a054bbf31fb90f6a.js",
+      "static/css/6ce4a955a7fe9409.css",
+      "static/chunks/pages/_app-70847c9564ee87f4.js"
+    ],
+    "/_error": [
+      "static/chunks/webpack-e44828098689bcba.js",
+      "static/chunks/framework-5f4595e5518b5600.js",
+      "static/chunks/main-a054bbf31fb90f6a.js",
+      "static/chunks/pages/_error-2280fa386d040b66.js"
+    ],
+    "/confirmed": [
+      "static/chunks/webpack-e44828098689bcba.js",
+      "static/chunks/framework-5f4595e5518b5600.js",
+      "static/chunks/main-a054bbf31fb90f6a.js",
+      "static/chunks/434-741efdef44930ab4.js",
+      "static/css/1af3dad2beb46c4c.css",
+      "static/chunks/pages/confirmed-397af0dbee45a6bf.js"
+    ],
+    "/new": [
+      "static/chunks/webpack-e44828098689bcba.js",
+      "static/chunks/framework-5f4595e5518b5600.js",
+      "static/chunks/main-a054bbf31fb90f6a.js",
+      "static/chunks/434-741efdef44930ab4.js",
+      "static/css/c8aaf5a55700c3a4.css",
+      "static/chunks/pages/new-d76caad7f471034f.js"
+    ],
+    "/pending": [
+      "static/chunks/webpack-e44828098689bcba.js",
+      "static/chunks/framework-5f4595e5518b5600.js",
+      "static/chunks/main-a054bbf31fb90f6a.js",
+      "static/css/44f85ecebe33c0dd.css",
+      "static/chunks/pages/pending-61dabdf114cc4c0a.js"
+    ],
+    "/transactions": [
+      "static/chunks/webpack-e44828098689bcba.js",
+      "static/chunks/framework-5f4595e5518b5600.js",
+      "static/chunks/main-a054bbf31fb90f6a.js",
+      "static/css/93ff69d62160c08c.css",
+      "static/chunks/pages/transactions-3047d884153caffa.js"
+    ]
+  },
+  "ampFirstPages": []
+}
