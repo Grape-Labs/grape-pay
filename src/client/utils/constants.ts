@@ -5,7 +5,8 @@ export const MAX_CONFIRMATIONS = 32;
 export const NON_BREAKING_SPACE = '\u00a0';
 
 // GenesysGo's devnet endpoint doesn't retain historical transactions
-export const DEVNET_ENDPOINT = clusterApiUrl('devnet');
+//export const DEVNET_ENDPOINT = clusterApiUrl('devnet');
+export const DEVNET_ENDPOINT = 'https://solana-mainnet.phantom.tech';
 
 // Use Phantom's mainnet endpoint instead of GenesysGo (auth issue) or default (ratelimits)
 export const MAINNET_ENDPOINT = 'https://solana-mainnet.phantom.tech';
