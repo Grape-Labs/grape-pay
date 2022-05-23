@@ -1,6 +1,6 @@
 import React, { FC, HTMLAttributes, ReactNode } from 'react';
 import { RefreshIcon } from '../images/RefreshIcon';
-import css from './BackButton.module.css';
+import css from './RefreshButton.module.css';
 
 export interface RefreshButtonProps {
     children: ReactNode;

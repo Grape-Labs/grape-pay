@@ -4,40 +4,6 @@ exports.id = 971;
 exports.ids = [971];
 exports.modules = {
 
-/***/ 1439:
-/***/ ((module) => {
-
-// Exports
-module.exports = {
-	"button": "BackButton_button__uoNsh"
-};
-
-
-/***/ }),
-
-/***/ 7477:
-/***/ ((module) => {
-
-// Exports
-module.exports = {
-	"button": "FullscreenButton_button__2yaeO"
-};
-
-
-/***/ }),
-
-/***/ 5936:
-/***/ ((module) => {
-
-// Exports
-module.exports = {
-	"token_dark": "GenerateButton_token_dark__yX5F_",
-	"root": "GenerateButton_root__hLERD"
-};
-
-
-/***/ }),
-
 /***/ 9090:
 /***/ ((module) => {
 
@@ -127,26 +93,7 @@ const Amount = ({ amount , showZero  })=>{
 
 /***/ }),
 
-/***/ 7570:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "O": () => (/* binding */ useFullscreen),
-/* harmony export */   "s": () => (/* binding */ FullscreenContext)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6689);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-const FullscreenContext = (0,react__WEBPACK_IMPORTED_MODULE_0__.createContext)({});
-function useFullscreen() {
-    return (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(FullscreenContext);
-}
-
-
-/***/ }),
-
-/***/ 9363:
+/***/ 1406:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -165,134 +112,8 @@ var jsx_runtime_ = __webpack_require__(997);
 var external_react_ = __webpack_require__(6689);
 // EXTERNAL MODULE: external "react-responsive"
 var external_react_responsive_ = __webpack_require__(6666);
-;// CONCATENATED MODULE: ./src/client/components/images/RefreshIcon.tsx
-
-
-const RefreshIcon = ({ width =20 , height =20  })=>{
-    return /*#__PURE__*/ jsx_runtime_.jsx("svg", {
-        width: width,
-        height: height,
-        fill: "none",
-        viewBox: "0 0 24 24",
-        xmlns: "http://www.w3.org/2000/svg",
-        children: /*#__PURE__*/ jsx_runtime_.jsx("path", {
-            d: "M464 16c-17.67 0-32 14.31-32 32v74.09C392.1 66.52 327.4 32 256 32C161.5 32 78.59 92.34 49.58 182.2c-5.438 16.81 3.797 34.88 20.61 40.28c16.89 5.5 34.88-3.812 40.3-20.59C130.9 138.5 189.4 96 256 96c50.5 0 96.26 24.55 124.4 64H336c-17.67 0-32 14.31-32 32s14.33 32 32 32h128c17.67 0 32-14.31 32-32V48C496 30.31 481.7 16 464 16zM441.8 289.6c-16.92-5.438-34.88 3.812-40.3 20.59C381.1 373.5 322.6 416 256 416c-50.5 0-96.25-24.55-124.4-64H176c17.67 0 32-14.31 32-32s-14.33-32-32-32h-128c-17.67 0-32 14.31-32 32v144c0 17.69 14.33 32 32 32s32-14.31 32-32v-74.09C119.9 445.5 184.6 480 255.1 480c94.45 0 177.4-60.34 206.4-150.2C467.9 313 458.6 294.1 441.8 289.6z",
-            stroke: "currentColor",
-            strokeLinecap: "round",
-            strokeLinejoin: "round",
-            strokeWidth: "2"
-        })
-    });
-};
-
-// EXTERNAL MODULE: ./src/client/components/buttons/BackButton.module.css
-var BackButton_module = __webpack_require__(1439);
-var BackButton_module_default = /*#__PURE__*/__webpack_require__.n(BackButton_module);
-;// CONCATENATED MODULE: ./src/client/components/buttons/RefreshButton.tsx
-
-
-
-
-const RefreshButton = ({ children , onClick  })=>{
-    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("button", {
-        className: (BackButton_module_default()).button,
-        type: "button",
-        onClick: onClick,
-        children: [
-            /*#__PURE__*/ jsx_runtime_.jsx(RefreshIcon, {}),
-            children
-        ]
-    });
-};
-
-// EXTERNAL MODULE: ./src/client/hooks/useFullscreen.ts
-var useFullscreen = __webpack_require__(7570);
-;// CONCATENATED MODULE: ./src/client/components/images/MaximizeIcon.tsx
-
-
-const MaximizeIcon = ({ width =20 , height =20  })=>{
-    return /*#__PURE__*/ jsx_runtime_.jsx("svg", {
-        width: width,
-        height: height,
-        fill: "none",
-        viewBox: "0 0 24 24",
-        xmlns: "http://www.w3.org/2000/svg",
-        children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("g", {
-            stroke: "currentColor",
-            strokeLinecap: "round",
-            strokeLinejoin: "round",
-            strokeWidth: "2",
-            children: [
-                /*#__PURE__*/ jsx_runtime_.jsx("path", {
-                    d: "m15 3h6v6"
-                }),
-                /*#__PURE__*/ jsx_runtime_.jsx("path", {
-                    d: "m9 21h-6v-6"
-                }),
-                /*#__PURE__*/ jsx_runtime_.jsx("path", {
-                    d: "m21 3-7 7"
-                }),
-                /*#__PURE__*/ jsx_runtime_.jsx("path", {
-                    d: "m3 21 7-7"
-                })
-            ]
-        })
-    });
-};
-
-;// CONCATENATED MODULE: ./src/client/components/images/MinimizeIcon.tsx
-
-
-const MinimizeIcon = ({ width =20 , height =20  })=>{
-    return /*#__PURE__*/ jsx_runtime_.jsx("svg", {
-        width: width,
-        height: height,
-        fill: "none",
-        viewBox: "0 0 24 24",
-        xmlns: "http://www.w3.org/2000/svg",
-        children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("g", {
-            stroke: "currentColor",
-            strokeLinecap: "round",
-            strokeLinejoin: "round",
-            strokeWidth: "2",
-            children: [
-                /*#__PURE__*/ jsx_runtime_.jsx("path", {
-                    d: "m4 14h6v6"
-                }),
-                /*#__PURE__*/ jsx_runtime_.jsx("path", {
-                    d: "m20 10h-6v-6"
-                }),
-                /*#__PURE__*/ jsx_runtime_.jsx("path", {
-                    d: "m14 10 7-7"
-                }),
-                /*#__PURE__*/ jsx_runtime_.jsx("path", {
-                    d: "m3 21 7-7"
-                })
-            ]
-        })
-    });
-};
-
-// EXTERNAL MODULE: ./src/client/components/buttons/FullscreenButton.module.css
-var FullscreenButton_module = __webpack_require__(7477);
-var FullscreenButton_module_default = /*#__PURE__*/__webpack_require__.n(FullscreenButton_module);
-;// CONCATENATED MODULE: ./src/client/components/buttons/FullscreenButton.tsx
-
-
-
-
-
-
-const FullscreenButton = ()=>{
-    const { fullscreen , toggleFullscreen  } = (0,useFullscreen/* useFullscreen */.O)();
-    return /*#__PURE__*/ jsx_runtime_.jsx("button", {
-        className: (FullscreenButton_module_default()).button,
-        type: "button",
-        onClick: toggleFullscreen,
-        children: fullscreen ? /*#__PURE__*/ jsx_runtime_.jsx(MinimizeIcon, {}) : /*#__PURE__*/ jsx_runtime_.jsx(MaximizeIcon, {})
-    });
-};
-
+// EXTERNAL MODULE: ./src/client/components/buttons/FullscreenButton.tsx + 2 modules
+var FullscreenButton = __webpack_require__(7241);
 // EXTERNAL MODULE: ./src/client/hooks/usePayment.ts
 var usePayment = __webpack_require__(2347);
 // EXTERNAL MODULE: ./src/client/components/buttons/GenerateButton.module.css
@@ -389,6 +210,9 @@ const NumPad = ()=>{
         setAmount,
         value1
     ]);
+    function refreshPage() {
+        window.location.reload();
+    }
     return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
         className: (NumPad_module_default()).root,
         children: [
@@ -396,7 +220,15 @@ const NumPad = ()=>{
                 className: (NumPad_module_default()).text,
                 children: [
                     "Enter amount in ",
-                    symbol
+                    /*#__PURE__*/ jsx_runtime_.jsx("button", {
+                        style: {
+                            border: "1px solid #0063cc",
+                            borderRadius: "8px",
+                            cursor: "pointer"
+                        },
+                        onClick: refreshPage,
+                        children: symbol
+                    })
                 ]
             }),
             /*#__PURE__*/ jsx_runtime_.jsx("div", {
@@ -548,25 +380,17 @@ var NewPage_module_default = /*#__PURE__*/__webpack_require__.n(NewPage_module);
 
 
 
-
 const NewPage = ()=>{
     const phone = (0,external_react_responsive_.useMediaQuery)({
         query: "(max-width: 767px)"
     });
-    function refreshPage() {
-        window.location.reload();
-    }
     return phone ? /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
         className: (NewPage_module_default()).root,
         children: [
             /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
                 className: (NewPage_module_default()).top,
                 children: [
-                    /*#__PURE__*/ jsx_runtime_.jsx(FullscreenButton, {}),
-                    /*#__PURE__*/ jsx_runtime_.jsx(RefreshButton, {
-                        onClick: refreshPage,
-                        children: "Change Payment Type"
-                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx(FullscreenButton/* FullscreenButton */.d, {}),
                     /*#__PURE__*/ jsx_runtime_.jsx(TransactionsLink/* TransactionsLink */.G, {})
                 ]
             }),
@@ -585,15 +409,9 @@ const NewPage = ()=>{
             /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
                 className: (NewPage_module_default()).main,
                 children: [
-                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                    /*#__PURE__*/ jsx_runtime_.jsx("div", {
                         className: (NewPage_module_default()).top,
-                        children: [
-                            /*#__PURE__*/ jsx_runtime_.jsx(FullscreenButton, {}),
-                            /*#__PURE__*/ jsx_runtime_.jsx(RefreshButton, {
-                                onClick: refreshPage,
-                                children: "Change Payment Type"
-                            })
-                        ]
+                        children: /*#__PURE__*/ jsx_runtime_.jsx(FullscreenButton/* FullscreenButton */.d, {})
                     }),
                     /*#__PURE__*/ jsx_runtime_.jsx("div", {
                         className: (NewPage_module_default()).body,
@@ -820,7 +638,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [505,664,231,472,434,380], () => (__webpack_exec__(9363)));
+var __webpack_exports__ = __webpack_require__.X(0, [505,664,231,472,434,414,380], () => (__webpack_exec__(1406)));
 module.exports = __webpack_exports__;
 
 })();

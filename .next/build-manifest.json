@@ -5,26 +5,26 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/vuwQxILR3rCsTOh8HIuGp/_buildManifest.js",
-    "static/vuwQxILR3rCsTOh8HIuGp/_ssgManifest.js",
-    "static/vuwQxILR3rCsTOh8HIuGp/_middlewareManifest.js"
+    "static/-8H7c6JfjqHFdk3OZwt9r/_buildManifest.js",
+    "static/-8H7c6JfjqHFdk3OZwt9r/_ssgManifest.js",
+    "static/-8H7c6JfjqHFdk3OZwt9r/_middlewareManifest.js"
   ],
   "pages": {
     "/_app": [
-      "static/chunks/webpack-bad95e69890f2839.js",
+      "static/chunks/webpack-2919a420064e0d54.js",
       "static/chunks/framework-5f4595e5518b5600.js",
       "static/chunks/main-81f4fb35f4507347.js",
-      "static/css/028727bcbb937d2a.css",
-      "static/chunks/pages/_app-5523dc87d5cc2dd9.js"
+      "static/css/6958781d49c3660d.css",
+      "static/chunks/pages/_app-5fa7e032c5d39862.js"
     ],
     "/_error": [
-      "static/chunks/webpack-bad95e69890f2839.js",
+      "static/chunks/webpack-2919a420064e0d54.js",
       "static/chunks/framework-5f4595e5518b5600.js",
       "static/chunks/main-81f4fb35f4507347.js",
       "static/chunks/pages/_error-0a004b8b8498208d.js"
     ],
     "/confirmed": [
-      "static/chunks/webpack-bad95e69890f2839.js",
+      "static/chunks/webpack-2919a420064e0d54.js",
       "static/chunks/framework-5f4595e5518b5600.js",
       "static/chunks/main-81f4fb35f4507347.js",
       "static/chunks/434-d4d8844b99cd0ee7.js",
@@ -32,22 +32,22 @@
       "static/chunks/pages/confirmed-960e6a9cf9985057.js"
     ],
     "/new": [
-      "static/chunks/webpack-bad95e69890f2839.js",
+      "static/chunks/webpack-2919a420064e0d54.js",
       "static/chunks/framework-5f4595e5518b5600.js",
       "static/chunks/main-81f4fb35f4507347.js",
       "static/chunks/434-d4d8844b99cd0ee7.js",
-      "static/css/c8aaf5a55700c3a4.css",
-      "static/chunks/pages/new-ce6da444f0d32600.js"
+      "static/css/5a247c0136e955fc.css",
+      "static/chunks/pages/new-3273367e597041e4.js"
     ],
     "/pending": [
-      "static/chunks/webpack-bad95e69890f2839.js",
+      "static/chunks/webpack-2919a420064e0d54.js",
       "static/chunks/framework-5f4595e5518b5600.js",
       "static/chunks/main-81f4fb35f4507347.js",
       "static/css/44f85ecebe33c0dd.css",
       "static/chunks/pages/pending-5422a13c024f9e0c.js"
     ],
     "/transactions": [
-      "static/chunks/webpack-bad95e69890f2839.js",
+      "static/chunks/webpack-2919a420064e0d54.js",
       "static/chunks/framework-5f4595e5518b5600.js",
       "static/chunks/main-81f4fb35f4507347.js",
       "static/css/93ff69d62160c08c.css",

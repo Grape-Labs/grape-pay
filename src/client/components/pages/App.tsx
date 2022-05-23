@@ -18,6 +18,7 @@ import { SolanaPayLogo } from '../images/SolanaPayLogo';
 import { SOLIcon } from '../images/SOLIcon';
 import { USDCIcon } from '../images/USDCIcon';
 import { GrapeIcon } from '../images/GrapeIcon';
+import { FullscreenButton } from '../buttons/FullscreenButton';
 import css from './App.module.css';
 //import Select, { StylesConfig } from 'react-select'
 import cssButton from '../buttons/GenerateButton.module.css';
@@ -126,7 +127,9 @@ const App: FC<AppProps> & { getInitialProps(appContext: AppContext): Promise<App
             :*/}
                 <>
                 {selectedToken.length <= 0 ? 
-                    <p><h1 style={{textAlign:"center",marginTop:2}}>SELECT SOL / SPL-TOKEN</h1>
+                    <p>
+                        <FullscreenButton />
+                        <h1 style={{textAlign:"center",marginTop:2}}>SELECT SOL / SPL-TOKEN</h1>
                         <button
                             className={cssButton.token_dark}
                             type="button"

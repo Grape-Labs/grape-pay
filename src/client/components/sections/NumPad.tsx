@@ -41,10 +41,12 @@ export const NumPad: FC = () => {
 
     const { setAmount } = usePayment();
     useEffect(() => setAmount(value ? new BigNumber(value) : undefined), [setAmount, value]);
-
+    function refreshPage() {
+        window.location.reload();
+    }
     return (
         <div className={css.root}>
-            <div className={css.text}>Enter amount in {symbol}</div>
+            <div className={css.text}>Enter amount in <button style={{border:"1px solid #0063cc", borderRadius:'8px', cursor:'pointer'}} onClick={refreshPage}>{symbol}</button></div>
             <div className={css.value}>{value}</div>
             <div className={css.buttons}>
                 <div className={css.row}>
